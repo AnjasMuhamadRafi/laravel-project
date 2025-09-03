@@ -466,7 +466,7 @@
                             </a>
                         </p>
                         <div class="flex justify-center gap-4 mt-4">
-                            <a href="https://wa.me/6281391000688" target="_blank" class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition">
+                            <a href="https://wa.me/6282246842008" target="_blank" class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=trio@enlulu.co.id" class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition">
@@ -837,7 +837,7 @@
                             <a href="https://www.linkedin.com/company/pt-enlulu-sukses-makmur" class="group w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
                                 <i class="fab fa-linkedin-in text-white group-hover:scale-125 transition-transform"></i>
                             </a>
-                            <a href="https://wa.me/6281391000688" class="group w-12 h-12 bg-gradient-to-r from-green-600 to-green-500 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
+                            <a href="https://wa.me/6282246842008" class="group w-12 h-12 bg-gradient-to-r from-green-600 to-green-500 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
                                 <i class="fab fa-whatsapp text-white group-hover:scale-125 transition-transform"></i>
                             </a>
                         </div>
