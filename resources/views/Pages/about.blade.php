@@ -1046,7 +1046,7 @@
                     services: [
                         { name: 'Consultant Advisor', icon: 'fas fa-user-md', color: 'blue' },
                         { name: 'Corporate Support', icon: 'fas fa-building', color: 'green' },
-                        { name: 'Business Development', icon: 'fas fa-chart-growth', color: 'purple' }
+                        { name: 'Business Development', icon: 'fas fa-business-time', color: 'purple' }
                     ],
                     description: 'Menyediakan tenaga konsultan dan business development untuk pengembangan jaringan Siloam Clinic.'
                 },
