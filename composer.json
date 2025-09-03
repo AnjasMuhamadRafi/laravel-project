@@ -64,6 +64,9 @@
         "php": "8.2"
     }
     },
+    "engines": {
+    "php": "8.2"
+    },
     "minimum-stability": "stable",
     "prefer-stable": true
 }
