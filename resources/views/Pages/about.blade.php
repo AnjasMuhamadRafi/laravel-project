@@ -151,6 +151,10 @@
                 value4_title: 'Komitmen',
                 value4_desc: 'Kami berdedikasi untuk membangun kemitraan jangka panjang dengan klien kami.',
 
+                //Struktur Organisasi
+                org_structure_title: 'Struktur Organisasi',
+                org_structure_subtitle: 'Struktur organisasi yang solid dan profesional dengan pembagian tugas yang jelas untuk memastikan pelayanan yang optimal kepada klien.',
+
                 // Leadership
                 leadership_title: 'Keunggulan Kepemimpinan',
                 leadership_subtitle: 'Tim kepemimpinan berpengalaman kami mendorong inovasi dan memastikan pemberian layanan luar biasa di semua unit bisnis.',
@@ -257,6 +261,10 @@
                 value3_desc: 'We embrace new ideas and technologies to improve our services.',
                 value4_title: 'Commitment',
                 value4_desc: 'We are dedicated to building long-term partnerships with our clients.',
+
+                //Organization Structure
+                org_structure_title: 'Organization Structure',
+                org_structure_subtitle: 'A solid and professional organizational structure with clear division of tasks to ensure optimal service to clients.',
 
                 // Leadership
                 leadership_title: 'Leadership Excellence',
@@ -697,6 +705,257 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-gray-800" data-translate="value4_title">Komitmen</h3>
                     <p class="text-gray-600 leading-relaxed" data-translate="value4_desc">Kami berdedikasi untuk membangun kemitraan jangka panjang dengan klien kami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizational Structure -->
+    <section class="py-24 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-200/20 to-cyan-200/20 rounded-full transform -translate-x-48 -translate-y-48"></div>
+        <div class="relative max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-blue-600 leading-tight md:leading-[1.35] bg-clip-text text-transparent" data-translate="org_structure_title">
+                    Struktur Organisasi
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="org_structure_subtitle">
+                    Struktur organisasi yang solid dan profesional dengan pembagian tugas yang jelas untuk memastikan pelayanan yang optimal kepada klien.
+                </p>
+            </div>
+
+            <!-- Interactive Organizational Chart -->
+            <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 relative overflow-hidden">
+                <!-- Company Header -->
+                <div class="text-center mb-12">
+                    <div class="bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-2xl p-6 inline-block shadow-xl">
+                        <h3 class="text-2xl font-bold">PT. ENLULU SUKSES MAKMUR</h3>
+                        <p class="text-blue-100 mt-2">Organization Structure</p>
+                    </div>
+                </div>
+
+                <!-- Executive Level -->
+                <div class="flex justify-center mb-8">
+                    <div class="text-center group cursor-pointer">
+                        <div class="bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-2xl p-6 shadow-xl group-hover:scale-105 transition-all duration-300 min-w-[200px]">
+                            <i class="fas fa-crown text-3xl mb-3"></i>
+                            <h4 class="font-bold text-lg">Direktur</h4>
+                            <p class="text-purple-100 text-sm italic">Winarso</p>
+                        </div>
+                        <div class="w-1 h-8 bg-gray-300 mx-auto mt-4"></div>
+                    </div>
+                </div>
+
+                <!-- Management Level -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="text-center group cursor-pointer">
+                        <div class="bg-gradient-to-br from-orange-500 to-red-500 text-white rounded-2xl p-4 shadow-lg group-hover:scale-105 transition-all duration-300">
+                            <i class="fas fa-user-tie text-2xl mb-2"></i>
+                            <h4 class="font-bold">HRD</h4>
+                            <p class="text-orange-100 text-sm italic">Armayanti</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center group cursor-pointer">
+                        <div class="bg-gradient-to-br from-green-500 to-teal-500 text-white rounded-2xl p-4 shadow-lg group-hover:scale-105 transition-all duration-300">
+                            <i class="fas fa-file-contract text-2xl mb-2"></i>
+                            <h4 class="font-bold">Contract Specialis</h4>
+                            <p class="text-green-100 text-sm italic">MURI</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center group cursor-pointer">
+                        <div class="bg-gradient-to-br from-blue-500 to-indigo-500 text-white rounded-2xl p-4 shadow-lg group-hover:scale-105 transition-all duration-300">
+                            <i class="fas fa-cogs text-2xl mb-2"></i>
+                            <h4 class="font-bold">Manager Operation</h4>
+                            <p class="text-blue-100 text-sm italic">Ahmad Suhandi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Department Level -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <!-- Sales Department -->
+                    <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-6">
+                        <div class="text-center mb-6">
+                            <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl p-4 inline-block shadow-lg">
+                                <i class="fas fa-chart-line text-xl mb-2"></i>
+                                <h4 class="font-bold">Sales Manager</h4>
+                                <p class="text-orange-100 text-sm italic">Trio Pambudi</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
+                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 1</p>
+                                <p class="text-gray-500 text-xs">Abas</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
+                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 2</p>
+                                <p class="text-gray-500 text-xs">Mutiara</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
+                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 3</p>
+                                <p class="text-gray-500 text-xs">Raisha</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
+                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 4</p>
+                                <p class="text-gray-500 text-xs">Emy</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
+                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 5</p>
+                                <p class="text-gray-500 text-xs">Mustamin</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Management Department -->
+                    <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6">
+                        <div class="text-center mb-6">
+                            <div class="bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-xl p-4 inline-block shadow-lg">
+                                <i class="fas fa-project-diagram text-xl mb-2"></i>
+                                <h4 class="font-bold">Manager Project</h4>
+                                <h4 class="font-bold">Kurir, Gudang</h4>
+                                <p class="text-green-100 text-sm italic">Oka Sanjaya</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
+                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 1</p>
+                                <p class="text-gray-500 text-xs">Yoni</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
+                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 2</p>
+                                <p class="text-gray-500 text-xs">Ilham</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Finance Department -->
+                    <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6">
+                        <div class="text-center mb-6">
+                            <div class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-xl p-4 inline-block shadow-lg">
+                                <i class="fas fa-calculator text-xl mb-2"></i>
+                                <h4 class="font-bold">Finance Manager</h4>
+                                <p class="text-blue-100 text-sm italic">Surti</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
+                                <p class="font-medium text-gray-800 text-sm">Finance 1</p>
+                                <p class="text-gray-500 text-xs">Amir</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
+                                <p class="font-medium text-gray-800 text-sm">Finance 2</p>
+                                <p class="text-gray-500 text-xs">Arinta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff Area -->
+                <div class="bg-gradient-to-r from-gray-100 to-gray-200 rounded-2xl p-6 text-center">
+                    <div class="bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-xl p-4 inline-block shadow-lg">
+                        <i class="fas fa-users text-2xl mb-2"></i>
+                        <h4 class="font-bold text-lg">Staff Area</h4>
+                        <p class="text-gray-200 text-sm">Operational Support Teams</p>
+                    </div>
+                </div>
+
+            <!-- Organization Facts -->
+            <div class="mt-16 grid md:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-6 text-center">
+                    <div class="bg-gradient-to-r from-purple-500 to-pink-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-sitemap text-white text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">Struktur Jelas</h4>
+                    <p class="text-gray-600 text-sm">Hierarki yang terorganisir dengan baik</p>
+                </div>
+                <div class="bg-gradient-to-br from-orange-100 to-red-100 rounded-2xl p-6 text-center">
+                    <div class="bg-gradient-to-r from-orange-500 to-red-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-friends text-white text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">Tim Berpengalaman</h4>
+                    <p class="text-gray-600 text-sm">Profesional di setiap bidang</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-100 to-teal-100 rounded-2xl p-6 text-center">
+                    <div class="bg-gradient-to-r from-green-500 to-teal-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tasks text-white text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">Koordinasi Efektif</h4>
+                    <p class="text-gray-600 text-sm">Komunikasi antar departemen yang baik</p>
+                </div>
+                <div class="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl p-6 text-center">
+                    <div class="bg-gradient-to-r from-blue-500 to-cyan-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-white text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">Pertumbuhan Berkelanjutan</h4>
+                    <p class="text-gray-600 text-sm">Pengembangan organisasi yang terus menerus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Leadership -->
+    <section class="py-24 bg-gradient-to-br from-gray-100 to-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-orange-200/20 to-red-200/20 rounded-full transform translate-x-36 -translate-y-36"></div>
+        <div class="relative max-w-6xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-orange-600 leading-tight md:leading-[1.35] bg-clip-text text-transparent" data-translate="leadership_title">
+                    Keunggulan Kepemimpinan
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mx-auto mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="leadership_subtitle">
+                    Tim kepemimpinan berpengalaman kami mendorong inovasi dan memastikan pemberian layanan luar biasa di semua unit bisnis.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center group">
+                    <div class="relative mb-6">
+                        <div class="w-32 h-32 bg-gradient-to-br from-orange-400 to-red-500 rounded-full mx-auto flex items-center justify-center text-white text-4xl font-bold shadow-2xl group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800" data-translate="leader1_title">Kepemimpinan Eksekutif</h3>
+                    <p class="text-gray-600 mb-4" data-translate="leader1_desc">Visi strategis dan keunggulan bisnis</p>
+                    <div class="flex justify-center space-x-2">
+                        <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
+                        <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                        <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                    </div>
+                </div>
+
+                <div class="text-center group">
+                    <div class="relative mb-6">
+                        <div class="w-32 h-32 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full mx-auto flex items-center justify-center text-white text-4xl font-bold shadow-2xl group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800" data-translate="leader2_title">Manajemen Operasional</h3>
+                    <p class="text-gray-600 mb-4" data-translate="leader2_desc">Keunggulan dan efisiensi operasional</p>
+                    <div class="flex justify-center space-x-2">
+                        <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <div class="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                    </div>
+                </div>
+
+                <div class="text-center group">
+                    <div class="relative mb-6">
+                        <div class="w-32 h-32 bg-gradient-to-br from-green-400 to-teal-500 rounded-full mx-auto flex items-center justify-center text-white text-4xl font-bold shadow-2xl group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800" data-translate="leader3_title">Pengembangan HR</h3>
+                    <p class="text-gray-600 mb-4" data-translate="leader3_desc">Pengembangan dan pertumbuhan orang</p>
+                    <div class="flex justify-center space-x-2">
+                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                        <div class="w-2 h-2 bg-teal-400 rounded-full"></div>
+                        <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                    </div>
                 </div>
             </div>
         </div>
