@@ -861,38 +861,38 @@
                     </div>
                 </div>
 
-            <!-- Organization Facts -->
-            <div class="mt-16 grid md:grid-cols-4 gap-6">
-                <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-6 text-center">
-                    <div class="bg-gradient-to-r from-purple-500 to-pink-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-sitemap text-white text-xl"></i>
+                <!-- Organization Facts -->
+                <div class="mt-16 grid md:grid-cols-4 gap-6">
+                    <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-6 text-center">
+                        <div class="bg-gradient-to-r from-purple-500 to-pink-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-sitemap text-white text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Struktur Jelas</h4>
+                        <p class="text-gray-600 text-sm">Hierarki yang terorganisir dengan baik</p>
                     </div>
-                    <h4 class="font-bold text-gray-800 mb-2">Struktur Jelas</h4>
-                    <p class="text-gray-600 text-sm">Hierarki yang terorganisir dengan baik</p>
-                </div>
-                <div class="bg-gradient-to-br from-orange-100 to-red-100 rounded-2xl p-6 text-center">
-                    <div class="bg-gradient-to-r from-orange-500 to-red-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-user-friends text-white text-xl"></i>
+                    <div class="bg-gradient-to-br from-orange-100 to-red-100 rounded-2xl p-6 text-center">
+                        <div class="bg-gradient-to-r from-orange-500 to-red-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-friends text-white text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Tim Berpengalaman</h4>
+                        <p class="text-gray-600 text-sm">Profesional di setiap bidang</p>
                     </div>
-                    <h4 class="font-bold text-gray-800 mb-2">Tim Berpengalaman</h4>
-                    <p class="text-gray-600 text-sm">Profesional di setiap bidang</p>
-                </div>
-                <div class="bg-gradient-to-br from-green-100 to-teal-100 rounded-2xl p-6 text-center">
-                    <div class="bg-gradient-to-r from-green-500 to-teal-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-tasks text-white text-xl"></i>
+                    <div class="bg-gradient-to-br from-green-100 to-teal-100 rounded-2xl p-6 text-center">
+                        <div class="bg-gradient-to-r from-green-500 to-teal-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tasks text-white text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Koordinasi Efektif</h4>
+                        <p class="text-gray-600 text-sm">Komunikasi antar departemen yang baik</p>
                     </div>
-                    <h4 class="font-bold text-gray-800 mb-2">Koordinasi Efektif</h4>
-                    <p class="text-gray-600 text-sm">Komunikasi antar departemen yang baik</p>
-                </div>
-                <div class="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl p-6 text-center">
-                    <div class="bg-gradient-to-r from-blue-500 to-cyan-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-chart-line text-white text-xl"></i>
+                    <div class="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl p-6 text-center">
+                        <div class="bg-gradient-to-r from-blue-500 to-cyan-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-chart-line text-white text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Pertumbuhan Berkelanjutan</h4>
+                        <p class="text-gray-600 text-sm">Pengembangan organisasi yang terus menerus</p>
                     </div>
-                    <h4 class="font-bold text-gray-800 mb-2">Pertumbuhan Berkelanjutan</h4>
-                    <p class="text-gray-600 text-sm">Pengembangan organisasi yang terus menerus</p>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Team Leadership -->
@@ -983,130 +983,162 @@
 
             <!-- Client Logos Grid -->
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16" x-data="{
-            showModal: false,
-            currentClient: null,
-            clients: {
-                'lippoinsurance': {
-                    name: 'Lippo Insurance',
-                    logo: 'assets/images/clients/lippo.png',
-                    coverage: 'National Coverage',
-                    services: [
-                        { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'blue' },
-                        { name: 'Pest Control', icon: 'fas fa-bug', color: 'green' },
-                        { name: 'Security', icon: 'fas fa-shield-alt', color: 'red' },
-                        { name: 'Office Boy', icon: 'fas fa-user-tie', color: 'orange' },
-                        { name: 'Driver', icon: 'fas fa-car', color: 'purple' },
-                        { name: 'Sales & Marketing', icon: 'fas fa-chart-line', color: 'cyan' },
-                        { name: 'Parking Service', icon: 'fas fa-parking', color: 'yellow' },
-                        { name: 'Data Entry', icon: 'fas fa-keyboard', color: 'pink' },
-                        { name: 'Customer Service', icon: 'fas fa-headset', color: 'teal' }
-                    ],
-                    description: 'Kerjasama dengan Lippo Insurance dalam menyediakan berbagai layanan operasional dan dukungan bisnis dengan cakupan nasional.'
-                },
-                'pertani': {
-                    name: 'Pertani',
-                    logo: 'assets/images/clients/pertani.png',
-                    coverage: 'Jabodetabek Coverage',
-                    services: [
-                        { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'green' },
-                        { name: 'Pest Control', icon: 'fas fa-bug', color: 'red' },
-                        { name: 'Driver', icon: 'fas fa-car', color: 'blue' },
-                        { name: 'Office Boy', icon: 'fas fa-user-tie', color: 'orange' },
-                        { name: 'Receptionist', icon: 'fas fa-concierge-bell', color: 'purple' },
-                        { name: 'Parking Service', icon: 'fas fa-parking', color: 'yellow' },
-                        { name: 'Customer Service', icon: 'fas fa-headset', color: 'cyan' }
-                    ],
-                    description: 'Mendukung operasional Pertani dengan berbagai layanan fasilitas dan dukungan administratif di wilayah Jabodetabek.'
-                },
-                'harapanbunda': {
-                    name: 'RS. Harapan Bunda',
-                    logo: 'assets/images/clients/harapanbunda.png',
-                    coverage: 'Pest & Rodent Control',
-                    services: [
-                        { name: 'Pest Control Specialist', icon: 'fas fa-bug', color: 'green' },
-                        { name: 'Rodent Control', icon: 'fas fa-mouse', color: 'red' },
-                        { name: 'Sanitization', icon: 'fas fa-spray-can', color: 'blue' },
-                        { name: 'Maintenance', icon: 'fas fa-tools', color: 'orange' }
-                    ],
-                    description: 'Spesialis pengendalian hama dan tikus untuk menjaga standar kebersihan dan keamanan di lingkungan rumah sakit.'
-                },
-                'jne': {
-                    name: 'JNE Express',
-                    logo: 'assets/images/clients/jne.png',
-                    coverage: 'Jabodetabek Coverage',
-                    services: [
-                        { name: 'Helper Gudang', icon: 'fas fa-warehouse', color: 'blue' },
-                        { name: 'Pelaksana Gudang (Freelance)', icon: 'fas fa-boxes', color: 'orange' },
-                        { name: 'Driver', icon: 'fas fa-truck', color: 'green' },
-                        { name: 'Kurir', icon: 'fas fa-shipping-fast', color: 'red' }
-                    ],
-                    description: 'Menyediakan tenaga operasional untuk mendukung layanan pengiriman JNE di wilayah Jabodetabek.'
-                },
-                'jnt': {
-                    name: 'J&T Express',
-                    logo: '/assets/images/clients/jnt.png',
-                    coverage: 'Jabodetabek Coverage',
-                    services: [
-                        { name: 'Resepsionis', icon: 'fas fa-concierge-bell', color: 'purple' },
-                        { name: 'Staff Gudang', icon: 'fas fa-warehouse', color: 'blue' },
-                        { name: 'Pelaksana Gudang (Freelance)', icon: 'fas fa-boxes', color: 'orange' },
-                        { name: 'Driver', icon: 'fas fa-truck', color: 'green' }
-                    ],
-                    description: 'Dukungan operasional komprehensif untuk J&T Express meliputi front office, warehouse, dan logistik.'
-                },
-                'jds': {
-                    name: 'JDS - PT Jelajah Data Semesta',
-                    logo: 'assets/images/clients/jds.png',
-                    coverage: 'National Coverage',
-                    services: [
-                        { name: 'Building Acquisition', icon: 'fas fa-building', color: 'blue' },
-                        { name: 'Supervisor Marketing Acquisition', icon: 'fas fa-user-plus', color: 'green' },
-                        { name: 'Team Leader SPG', icon: 'fas fa-users', color: 'purple' },
-                        { name: 'Marketing Acquisition', icon: 'fas fa-chart-line', color: 'orange' },
-                        { name: 'SPG', icon: 'fas fa-female', color: 'pink' }
-                    ],
-                    description: 'Mendukung JDS dalam ekspansi dan akuisisi pasar dengan tim marketing dan sales profesional di seluruh Indonesia.'
-                },
-                'fastock': {
-                    name: 'Fastock',
-                    logo: 'assets/images/clients/fastock.png',
-                    coverage: 'Jabodetabek Coverage',
-                    services: [
-                        { name: 'Helper Gudang', icon: 'fas fa-warehouse', color: 'red' },
-                        { name: 'Admin Gudang', icon: 'fas fa-clipboard', color: 'blue' },
-                        { name: 'Customer Service', icon: 'fas fa-headset', color: 'green' },
-                        { name: 'Consultan Executive B2B', icon: 'fas fa-handshake', color: 'purple' }
-                    ],
-                    description: 'Menyediakan dukungan operasional gudang dan layanan konsultasi B2B untuk Fastock di wilayah Jabodetabek.'
-                },
-                'imoo': {
-                    name: 'imoo',
-                    logo: 'assets/images/clients/imoo.png',
-                    coverage: 'Regional Coverage',
-                    services: [
-                        { name: 'Storage Support', icon: 'fas fa-database', color: 'orange' },
-                        { name: 'Pelaksana Gudang (Freelance)', icon: 'fas fa-boxes', color: 'blue' }
-                    ],
-                    description: 'Dukungan penyimpanan dan pengelolaan gudang untuk produk imoo dengan cakupan regional.'
-                },
-                'kalbe': {
-                    name: 'Kalbe',
-                    logo: 'assets/images/clients/kalbe.png',
-                    coverage: 'National Coverage',
-                    services: [
-                        { name: 'Telesales', icon: 'fas fa-phone', color: 'green' },
-                        { name: 'Outbound Call', icon: 'fas fa-phone-alt', color: 'blue' },
-                        { name: 'Inbound Call', icon: 'fas fa-headset', color: 'purple' },
-                        { name: 'Data Entry', icon: 'fas fa-keyboard', color: 'orange' },
-                        { name: 'Customer Service', icon: 'fas fa-users', color: 'cyan' }
-                    ],
-                    description: 'Mendukung Kalbe dengan layanan call center, telesales, dan customer service berskala nasional.'
-                },
-                'balitower': {
-                name: 'Bali Tower & Balifiber',
-                logo: 'assets/images/clients/balitower.png',
-                coverage: 'Multi-Regional & Multi-Service Provider',
-                services: [
+    showModal: false,
+    currentClient: null,
+
+    // Function to get background color class based on service type
+    getServiceBgClass(color) {
+        const colorClasses = {
+            'blue': 'bg-gradient-to-r from-blue-400 to-blue-600',
+            'green': 'bg-gradient-to-r from-green-400 to-green-600',
+            'red': 'bg-gradient-to-r from-red-400 to-red-600',
+            'orange': 'bg-gradient-to-r from-orange-400 to-orange-600',
+            'purple': 'bg-gradient-to-r from-purple-400 to-purple-600',
+            'cyan': 'bg-gradient-to-r from-cyan-400 to-cyan-600',
+            'yellow': 'bg-gradient-to-r from-yellow-400 to-yellow-600',
+            'pink': 'bg-gradient-to-r from-pink-400 to-pink-600',
+            'teal': 'bg-gradient-to-r from-teal-400 to-teal-600',
+            'indigo': 'bg-gradient-to-r from-indigo-400 to-indigo-600',
+            'amber': 'bg-gradient-to-r from-amber-400 to-amber-600',
+            'slate': 'bg-gradient-to-r from-slate-400 to-slate-600',
+            'emerald': 'bg-gradient-to-r from-emerald-400 to-emerald-600',
+            'rose': 'bg-gradient-to-r from-rose-400 to-rose-600',
+            'lime': 'bg-gradient-to-r from-lime-400 to-lime-600',
+            'violet': 'bg-gradient-to-r from-violet-400 to-violet-600',
+            'sky': 'bg-gradient-to-r from-sky-400 to-sky-600',
+            'fuchsia': 'bg-gradient-to-r from-fuchsia-400 to-fuchsia-600',
+            'mint': 'bg-gradient-to-r from-green-300 to-teal-400',
+            'coral': 'bg-gradient-to-r from-orange-300 to-pink-400',
+            'navy': 'bg-gradient-to-r from-blue-600 to-blue-800',
+            'gold': 'bg-gradient-to-r from-yellow-400 to-amber-500',
+            'crimson': 'bg-gradient-to-r from-red-500 to-red-700',
+            'darkgreen': 'bg-gradient-to-r from-green-600 to-green-800'
+        };
+        return colorClasses[color] || 'bg-gradient-to-r from-gray-400 to-gray-600';
+    },
+
+    clients: {
+        'lippoinsurance': {
+            name: 'Lippo Insurance',
+            logo: 'assets/images/clients/lippo.png',
+            coverage: 'National Coverage',
+            services: [
+                { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'blue' },
+                { name: 'Pest Control', icon: 'fas fa-bug', color: 'green' },
+                { name: 'Security', icon: 'fas fa-shield-alt', color: 'red' },
+                { name: 'Office Boy', icon: 'fas fa-user-tie', color: 'orange' },
+                { name: 'Driver', icon: 'fas fa-car', color: 'purple' },
+                { name: 'Sales & Marketing', icon: 'fas fa-chart-line', color: 'cyan' },
+                { name: 'Parking Service', icon: 'fas fa-parking', color: 'yellow' },
+                { name: 'Data Entry', icon: 'fas fa-keyboard', color: 'pink' },
+                { name: 'Customer Service', icon: 'fas fa-headset', color: 'teal' }
+            ],
+            description: 'Kerjasama dengan Lippo Insurance dalam menyediakan berbagai layanan operasional dan dukungan bisnis dengan cakupan nasional.'
+        },
+        'pertani': {
+            name: 'Pertani',
+            logo: 'assets/images/clients/pertani.png',
+            coverage: 'Jabodetabek Coverage',
+            services: [
+                { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'green' },
+                { name: 'Pest Control', icon: 'fas fa-bug', color: 'red' },
+                { name: 'Driver', icon: 'fas fa-car', color: 'blue' },
+                { name: 'Office Boy', icon: 'fas fa-user-tie', color: 'orange' },
+                { name: 'Receptionist', icon: 'fas fa-concierge-bell', color: 'purple' },
+                { name: 'Parking Service', icon: 'fas fa-parking', color: 'yellow' },
+                { name: 'Customer Service', icon: 'fas fa-headset', color: 'cyan' }
+            ],
+            description: 'Mendukung operasional Pertani dengan berbagai layanan fasilitas dan dukungan administratif di wilayah Jabodetabek.'
+        },
+        'harapanbunda': {
+            name: 'RS. Harapan Bunda',
+            logo: 'assets/images/clients/harapanbunda.png',
+            coverage: 'Pest & Rodent Control',
+            services: [
+                { name: 'Pest Control Specialist', icon: 'fas fa-bug', color: 'green' },
+                { name: 'Rodent Control', icon: 'fas fa-mouse', color: 'red' },
+                { name: 'Sanitization', icon: 'fas fa-spray-can', color: 'blue' },
+                { name: 'Maintenance', icon: 'fas fa-tools', color: 'orange' }
+            ],
+            description: 'Spesialis pengendalian hama dan tikus untuk menjaga standar kebersihan dan keamanan di lingkungan rumah sakit.'
+        },
+        'jne': {
+            name: 'JNE Express',
+            logo: 'assets/images/clients/jne.png',
+            coverage: 'Jabodetabek Coverage',
+            services: [
+                { name: 'Helper Gudang', icon: 'fas fa-warehouse', color: 'blue' },
+                { name: 'Pelaksana Gudang (Freelance)', icon: 'fas fa-boxes', color: 'orange' },
+                { name: 'Driver', icon: 'fas fa-truck', color: 'green' },
+                { name: 'Kurir', icon: 'fas fa-shipping-fast', color: 'red' }
+            ],
+            description: 'Menyediakan tenaga operasional untuk mendukung layanan pengiriman JNE di wilayah Jabodetabek.'
+        },
+        'jnt': {
+            name: 'J&T Express',
+            logo: '/assets/images/clients/jnt.png',
+            coverage: 'Jabodetabek Coverage',
+            services: [
+                { name: 'Resepsionis', icon: 'fas fa-concierge-bell', color: 'purple' },
+                { name: 'Staff Gudang', icon: 'fas fa-warehouse', color: 'blue' },
+                { name: 'Pelaksana Gudang (Freelance)', icon: 'fas fa-boxes', color: 'orange' },
+                { name: 'Driver', icon: 'fas fa-truck', color: 'green' }
+            ],
+            description: 'Dukungan operasional komprehensif untuk J&T Express meliputi front office, warehouse, dan logistik.'
+        },
+        'jds': {
+            name: 'JDS - PT Jelajah Data Semesta',
+            logo: 'assets/images/clients/jds.png',
+            coverage: 'National Coverage',
+            services: [
+                { name: 'Building Acquisition', icon: 'fas fa-building', color: 'blue' },
+                { name: 'Supervisor Marketing Acquisition', icon: 'fas fa-user-plus', color: 'green' },
+                { name: 'Team Leader SPG', icon: 'fas fa-users', color: 'purple' },
+                { name: 'Marketing Acquisition', icon: 'fas fa-chart-line', color: 'orange' },
+                { name: 'SPG', icon: 'fas fa-female', color: 'pink' }
+            ],
+            description: 'Mendukung JDS dalam ekspansi dan akuisisi pasar dengan tim marketing dan sales profesional di seluruh Indonesia.'
+        },
+        'fastock': {
+            name: 'Fastock',
+            logo: 'assets/images/clients/fastock.png',
+            coverage: 'Jabodetabek Coverage',
+            services: [
+                { name: 'Helper Gudang', icon: 'fas fa-warehouse', color: 'red' },
+                { name: 'Admin Gudang', icon: 'fas fa-clipboard', color: 'blue' },
+                { name: 'Customer Service', icon: 'fas fa-headset', color: 'green' },
+                { name: 'Consultan Executive B2B', icon: 'fas fa-handshake', color: 'purple' }
+            ],
+            description: 'Menyediakan dukungan operasional gudang dan layanan konsultasi B2B untuk Fastock di wilayah Jabodetabek.'
+        },
+        'imoo': {
+            name: 'imoo',
+            logo: 'assets/images/clients/imoo.png',
+            coverage: 'Regional Coverage',
+            services: [
+                { name: 'Storage Support', icon: 'fas fa-database', color: 'orange' },
+                { name: 'Pelaksana Gudang (Freelance)', icon: 'fas fa-boxes', color: 'blue' }
+            ],
+            description: 'Dukungan penyimpanan dan pengelolaan gudang untuk produk imoo dengan cakupan regional.'
+        },
+        'kalbe': {
+            name: 'Kalbe',
+            logo: 'assets/images/clients/kalbe.png',
+            coverage: 'National Coverage',
+            services: [
+                { name: 'Telesales', icon: 'fas fa-phone', color: 'green' },
+                { name: 'Outbound Call', icon: 'fas fa-phone-alt', color: 'blue' },
+                { name: 'Inbound Call', icon: 'fas fa-headset', color: 'purple' },
+                { name: 'Data Entry', icon: 'fas fa-keyboard', color: 'orange' },
+                { name: 'Customer Service', icon: 'fas fa-users', color: 'cyan' }
+            ],
+            description: 'Mendukung Kalbe dengan layanan call center, telesales, dan customer service berskala nasional.'
+        },
+        'balitower': {
+            name: 'Bali Tower & Balifiber',
+            logo: 'assets/images/clients/balitower.png',
+            coverage: 'Multi-Regional & Multi-Service Provider',
+            services: [
                 { name: 'Direct Sales', icon: 'fas fa-handshake', color: 'blue' },
                 { name: 'Call Center', icon: 'fas fa-headset', color: 'green' },
                 { name: 'Tele Sales', icon: 'fas fa-phone', color: 'purple' },
@@ -1131,152 +1163,152 @@
                 { name: 'Admin Support', icon: 'fas fa-clipboard', color: 'gold' },
                 { name: 'Assistant Manager FO', icon: 'fas fa-user-cog', color: 'crimson' },
                 { name: 'Data Center', icon: 'fas fa-server', color: 'darkgreen' }
-                ],
-                description: 'Comprehensive support untuk Bali Tower dan Bali fiber meliputi sales, technical, operational, management, dan specialized services di berbagai wilayah dengan layanan internet fiber dan infrastruktur telekomunikasi.'
-                },
-                'myrepublic': {
-                    name: 'MyRepublic',
-                    logo: 'assets/images/clients/myrep.png',
-                    coverage: 'Multi-Regional Coverage',
-                    services: [
-                        { name: 'Direct Sales', icon: 'fas fa-chart-line', color: 'purple' },
-                        { name: 'Regional Coverage', icon: 'fas fa-map-marked-alt', color: 'pink' }
-                    ],
-                    description: 'Mendukung ekspansi MyRepublic dengan tim direct sales profesional di berbagai wilayah strategis.'
-                },
-                'greenet': {
-                    name: 'Greenet',
-                    logo: 'assets/images/clients/greenet.png',
-                    coverage: 'Technical Support',
-                    services: [
-                        { name: 'Direct Sales', icon: 'fas fa-chart-line', color: 'green' },
-                        { name: 'IKR (Teknisi)', icon: 'fas fa-tools', color: 'blue' }
-                    ],
-                    description: 'Dukungan teknis dan penjualan untuk Greenet dalam pengembangan infrastruktur fiber optik.'
-                },
-                'cbnfiber': {
-                    name: 'CBN Fiber',
-                    logo: '/assets/images/clients/cbn.png',
-                    coverage: 'Regional Coverage',
-                    services: [
-                        { name: 'Direct Sales', icon: 'fas fa-handshake', color: 'blue' },
-                        { name: 'Admin Sales', icon: 'fas fa-clipboard', color: 'cyan' }
-                    ],
-                    description: 'Mendukung CBN Fiber dengan tim sales dan administrasi untuk ekspansi layanan internet berkecepatan tinggi.'
-                },
-                'tracon': {
-                    name: 'Tracon',
-                    logo: 'assets/images/clients/tracon.png',
-                    coverage: 'Jabodetabek Coverage',
-                    services: [
-                        { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'blue' },
-                        { name: 'Office Boy', icon: 'fas fa-user-tie', color: 'orange' },
-                        { name: 'Driver', icon: 'fas fa-car', color: 'green' },
-                        { name: 'Receptionist', icon: 'fas fa-concierge-bell', color: 'purple' },
-                        { name: 'Pest Control', icon: 'fas fa-bug', color: 'red' }
-                    ],
-                    description: 'Layanan fasilitas dan operasional komprehensif untuk Tracon di wilayah Jabodetabek.'
-                },
-                'sriwijayaair': {
-                    name: 'Sriwijaya Air',
-                    logo: 'assets/images/clients/sriwijaya.png',
-                    coverage: 'Tangerang Coverage',
-                    services: [
-                        { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'gold' },
-                        { name: 'Office Boy', icon: 'fas fa-user-tie', color: 'blue' },
-                        { name: 'Driver', icon: 'fas fa-car', color: 'green' },
-                        { name: 'Pest Control', icon: 'fas fa-bug', color: 'red' }
-                    ],
-                    description: 'Mendukung operasional Sriwijaya Air dengan layanan kebersihan dan fasilitas di area Tangerang.'
-                },
-                'pizzahut': {
-                    name: 'Pizza Hut',
-                    logo: 'assets/images/clients/pizzahut.png',
-                    coverage: 'National Coverage',
-                    services: [
-                        { name: 'Termite Control', icon: 'fas fa-bug', color: 'red' },
-                        { name: 'Maintenance', icon: 'fas fa-tools', color: 'orange' },
-                        { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'blue' },
-                        { name: 'Supplier Services', icon: 'fas fa-truck', color: 'green' }
-                    ],
-                    description: 'Layanan maintenance dan pest control untuk outlet Pizza Hut di seluruh Indonesia.'
-                },
-                'phd': {
-                    name: 'PHD',
-                    logo: 'assets/images/clients/phd.png',
-                    coverage: 'National Coverage',
-                    services: [
-                        { name: 'Maintenance', icon: 'fas fa-tools', color: 'orange' },
-                        { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'blue' }
-                    ],
-                    description: 'Dukungan maintenance dan cleaning service untuk jaringan PHD secara nasional.'
-                },
-                'marugameudon': {
-                    name: 'Marugame Udon',
-                    logo: 'assets/images/clients/marugame.png',
-                    coverage: 'National Coverage',
-                    services: [
-                        { name: 'Maintenance', icon: 'fas fa-tools', color: 'red' },
-                        { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'blue' }
-                    ],
-                    description: 'Layanan maintenance dan kebersihan untuk seluruh outlet Marugame Udon di Indonesia.'
-                },
-                'hokben': {
-                    name: 'HokBen',
-                    logo: 'assets/images/clients/hokben.png',
-                    coverage: 'Jabodetabek & Lampung Coverage',
-                    services: [
-                        { name: 'Driver', icon: 'fas fa-car', color: 'orange' },
-                        { name: 'Dispatcher', icon: 'fas fa-headset', color: 'blue' },
-                        { name: 'Staff Administration', icon: 'fas fa-clipboard', color: 'green' }
-                    ],
-                    description: 'Mendukung operasional HokBen dengan driver, dispatcher, dan staff administrasi di Jabodetabek dan Lampung.'
-                },
-                'siloamclinic': {
-                    name: 'Siloam Clinic',
-                    logo: 'assets/images/clients/siloam.png',
-                    coverage: 'National Coverage',
-                    services: [
-                        { name: 'Consultant Advisor', icon: 'fas fa-user-md', color: 'blue' },
-                        { name: 'Corporate Support', icon: 'fas fa-building', color: 'green' },
-                        { name: 'Business Development', icon: 'fas fa-business-time', color: 'purple' }
-                    ],
-                    description: 'Menyediakan tenaga konsultan dan business development untuk pengembangan jaringan Siloam Clinic.'
-                },
-                'lonsum': {
-                    name: 'Lonsum',
-                    logo: 'assets/images/clients/lonsum.png',
-                    coverage: 'National Coverage',
-                    services: [
-                        { name: 'Sales Coordinator', icon: 'fas fa-users', color: 'green' },
-                        { name: 'Sales Canvaser', icon: 'fas fa-handshake', color: 'blue' },
-                        { name: 'SPG & SPB', icon: 'fas fa-female', color: 'pink' },
-                        { name: 'Sales Support Staff', icon: 'fas fa-chart-line', color: 'orange' }
-                    ],
-                    description: 'Tim sales komprehensif untuk mendukung distribusi produk Lonsum di seluruh Indonesia.'
-                },
-                'miwon': {
-                    name: 'Miwon',
-                    logo: 'assets/images/clients/miwon.png',
-                    coverage: 'Regional Coverage',
-                    services: [
-                        { name: 'Receptionist', icon: 'fas fa-concierge-bell', color: 'red' },
-                        { name: 'Office Boy', icon: 'fas fa-user-tie', color: 'blue' },
-                        { name: 'Driver', icon: 'fas fa-car', color: 'green' }
-                    ],
-                    description: 'Dukungan operasional kantor untuk Miwon meliputi front office dan support services.'
-                },
-                'pg': {
-                    name: 'P&G',
-                    logo: 'assets/images/clients/p&g.png',
-                    coverage: 'Regional Coverage',
-                    services: [
-                        { name: 'Sales Motoris', icon: 'fas fa-motorcycle', color: 'blue' }
-                    ],
-                    description: 'Tim sales motoris untuk mendukung distribusi produk P&G di wilayah regional.'
-                }
-            }
-        }">
+            ],
+            description: 'Comprehensive support untuk Bali Tower dan Bali fiber meliputi sales, technical, operational, management, dan specialized services di berbagai wilayah dengan layanan internet fiber dan infrastruktur telekomunikasi.'
+        },
+        'myrepublic': {
+            name: 'MyRepublic',
+            logo: 'assets/images/clients/myrep.png',
+            coverage: 'Multi-Regional Coverage',
+            services: [
+                { name: 'Direct Sales', icon: 'fas fa-chart-line', color: 'purple' },
+                { name: 'Regional Coverage', icon: 'fas fa-map-marked-alt', color: 'pink' }
+            ],
+            description: 'Mendukung ekspansi MyRepublic dengan tim direct sales profesional di berbagai wilayah strategis.'
+        },
+        'greenet': {
+            name: 'Greenet',
+            logo: 'assets/images/clients/greenet.png',
+            coverage: 'Technical Support',
+            services: [
+                { name: 'Direct Sales', icon: 'fas fa-chart-line', color: 'green' },
+                { name: 'IKR (Teknisi)', icon: 'fas fa-tools', color: 'blue' }
+            ],
+            description: 'Dukungan teknis dan penjualan untuk Greenet dalam pengembangan infrastruktur fiber optik.'
+        },
+        'cbnfiber': {
+            name: 'CBN Fiber',
+            logo: '/assets/images/clients/cbn.png',
+            coverage: 'Regional Coverage',
+            services: [
+                { name: 'Direct Sales', icon: 'fas fa-handshake', color: 'blue' },
+                { name: 'Admin Sales', icon: 'fas fa-clipboard', color: 'cyan' }
+            ],
+            description: 'Mendukung CBN Fiber dengan tim sales dan administrasi untuk ekspansi layanan internet berkecepatan tinggi.'
+        },
+        'tracon': {
+            name: 'Tracon',
+            logo: 'assets/images/clients/tracon.png',
+            coverage: 'Jabodetabek Coverage',
+            services: [
+                { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'blue' },
+                { name: 'Office Boy', icon: 'fas fa-user-tie', color: 'orange' },
+                { name: 'Driver', icon: 'fas fa-car', color: 'green' },
+                { name: 'Receptionist', icon: 'fas fa-concierge-bell', color: 'purple' },
+                { name: 'Pest Control', icon: 'fas fa-bug', color: 'red' }
+            ],
+            description: 'Layanan fasilitas dan operasional komprehensif untuk Tracon di wilayah Jabodetabek.'
+        },
+        'sriwijayaair': {
+            name: 'Sriwijaya Air',
+            logo: 'assets/images/clients/sriwijaya.png',
+            coverage: 'Tangerang Coverage',
+            services: [
+                { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'gold' },
+                { name: 'Office Boy', icon: 'fas fa-user-tie', color: 'blue' },
+                { name: 'Driver', icon: 'fas fa-car', color: 'green' },
+                { name: 'Pest Control', icon: 'fas fa-bug', color: 'red' }
+            ],
+            description: 'Mendukung operasional Sriwijaya Air dengan layanan kebersihan dan fasilitas di area Tangerang.'
+        },
+        'pizzahut': {
+            name: 'Pizza Hut',
+            logo: 'assets/images/clients/pizzahut.png',
+            coverage: 'National Coverage',
+            services: [
+                { name: 'Termite Control', icon: 'fas fa-bug', color: 'red' },
+                { name: 'Maintenance', icon: 'fas fa-tools', color: 'orange' },
+                { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'blue' },
+                { name: 'Supplier Services', icon: 'fas fa-truck', color: 'green' }
+            ],
+            description: 'Layanan maintenance dan pest control untuk outlet Pizza Hut di seluruh Indonesia.'
+        },
+        'phd': {
+            name: 'PHD',
+            logo: 'assets/images/clients/phd.png',
+            coverage: 'National Coverage',
+            services: [
+                { name: 'Maintenance', icon: 'fas fa-tools', color: 'orange' },
+                { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'blue' }
+            ],
+            description: 'Dukungan maintenance dan cleaning service untuk jaringan PHD secara nasional.'
+        },
+        'marugameudon': {
+            name: 'Marugame Udon',
+            logo: 'assets/images/clients/marugame.png',
+            coverage: 'National Coverage',
+            services: [
+                { name: 'Maintenance', icon: 'fas fa-tools', color: 'red' },
+                { name: 'Cleaning Service', icon: 'fas fa-broom', color: 'blue' }
+            ],
+            description: 'Layanan maintenance dan kebersihan untuk seluruh outlet Marugame Udon di Indonesia.'
+        },
+        'hokben': {
+            name: 'HokBen',
+            logo: 'assets/images/clients/hokben.png',
+            coverage: 'Jabodetabek & Lampung Coverage',
+            services: [
+                { name: 'Driver', icon: 'fas fa-car', color: 'orange' },
+                { name: 'Dispatcher', icon: 'fas fa-headset', color: 'blue' },
+                { name: 'Staff Administration', icon: 'fas fa-clipboard', color: 'green' }
+            ],
+            description: 'Mendukung operasional HokBen dengan driver, dispatcher, dan staff administrasi di Jabodetabek dan Lampung.'
+        },
+        'siloamclinic': {
+            name: 'Siloam Clinic',
+            logo: 'assets/images/clients/siloam.png',
+            coverage: 'National Coverage',
+            services: [
+                { name: 'Consultant Advisor', icon: 'fas fa-user-md', color: 'blue' },
+                { name: 'Corporate Support', icon: 'fas fa-building', color: 'green' },
+                { name: 'Business Development', icon: 'fas fa-business-time', color: 'purple' }
+            ],
+            description: 'Menyediakan tenaga konsultan dan business development untuk pengembangan jaringan Siloam Clinic.'
+        },
+        'lonsum': {
+            name: 'Lonsum',
+            logo: 'assets/images/clients/lonsum.png',
+            coverage: 'National Coverage',
+            services: [
+                { name: 'Sales Coordinator', icon: 'fas fa-users', color: 'green' },
+                { name: 'Sales Canvaser', icon: 'fas fa-handshake', color: 'blue' },
+                { name: 'SPG & SPB', icon: 'fas fa-female', color: 'pink' },
+                { name: 'Sales Support Staff', icon: 'fas fa-chart-line', color: 'orange' }
+            ],
+            description: 'Tim sales komprehensif untuk mendukung distribusi produk Lonsum di seluruh Indonesia.'
+        },
+        'miwon': {
+            name: 'Miwon',
+            logo: 'assets/images/clients/miwon.png',
+            coverage: 'Regional Coverage',
+            services: [
+                { name: 'Receptionist', icon: 'fas fa-concierge-bell', color: 'red' },
+                { name: 'Office Boy', icon: 'fas fa-user-tie', color: 'blue' },
+                { name: 'Driver', icon: 'fas fa-car', color: 'green' }
+            ],
+            description: 'Dukungan operasional kantor untuk Miwon meliputi front office dan support services.'
+        },
+        'pg': {
+            name: 'P&G',
+            logo: 'assets/images/clients/p&g.png',
+            coverage: 'Regional Coverage',
+            services: [
+                { name: 'Sales Motoris', icon: 'fas fa-motorcycle', color: 'blue' }
+            ],
+            description: 'Tim sales motoris untuk mendukung distribusi produk P&G di wilayah regional.'
+        }
+    }
+}">
                 <!-- Generate client cards dynamically -->
                 <template x-for="(client, key) in clients" :key="key">
                     <div @click="currentClient = client; showModal = true" class="group bg-white rounded-2xl p-4 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer">
@@ -1362,10 +1394,11 @@
                                     <i class="fas fa-cogs text-blue-500 mr-3"></i>
                                     Layanan yang Disediakan
                                 </h4>
-                                <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+                                <!-- Fixed grid: 2 columns on mobile, 3 on tablet, 4 on desktop -->
+                                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                                     <template x-for="service in currentClient?.services || []" :key="service.name">
                                         <div class="service-card bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                                            <div class="w-14 h-14 bg-gradient-to-r from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                            <div :class="getServiceBgClass(service.color)" class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4">
                                                 <i :class="service.icon" class="text-white text-xl"></i>
                                             </div>
                                             <h5 x-text="service.name" class="font-semibold text-gray-800 text-sm"></h5>
@@ -1389,44 +1422,43 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Client Testimonial or Partnership Stats -->
-        <div class="bg-gradient-to-r from-orange-50 via-red-50 to-pink-50 rounded-3xl p-8 md:p-12">
-            <div class="text-center">
-                <div class="grid md:grid-cols-3 gap-8 mb-8">
-                    <div class="group">
-                        <div class="bg-gradient-to-br from-orange-500 to-red-500 text-white rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
-                            <i class="fas fa-handshake text-3xl mb-3"></i>
-                            <div class="text-3xl font-bold mb-1">100+</div>
-                            <div class="text-sm opacity-90" data-translate="client_stats_partners_label">Mitra Terpercaya</div>
+            <!-- Client Testimonial or Partnership Stats -->
+            <div class="bg-gradient-to-r from-orange-50 via-red-50 to-pink-50 rounded-3xl p-8 md:p-12">
+                <div class="text-center">
+                    <div class="grid md:grid-cols-3 gap-8 mb-8">
+                        <div class="group">
+                            <div class="bg-gradient-to-br from-orange-500 to-red-500 text-white rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                                <i class="fas fa-handshake text-3xl mb-3"></i>
+                                <div class="text-3xl font-bold mb-1">100+</div>
+                                <div class="text-sm opacity-90" data-translate="client_stats_partners_label">Mitra Terpercaya</div>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="bg-gradient-to-br from-blue-500 to-cyan-500 text-white rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                                <i class="fas fa-award text-3xl mb-3"></i>
+                                <div class="text-3xl font-bold mb-1">98%</div>
+                                <div class="text-sm opacity-90" data-translate="client_stats_satisfaction_label">Kepuasan Klien</div>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="bg-gradient-to-br from-green-500 to-teal-500 text-white rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                                <i class="fas fa-sync-alt text-3xl mb-3"></i>
+                                <div class="text-3xl font-bold mb-1">85%</div>
+                                <div class="text-sm opacity-90" data-translate="client_stats_renewal_label">Tingkat Perpanjangan</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="group">
-                        <div class="bg-gradient-to-br from-blue-500 to-cyan-500 text-white rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
-                            <i class="fas fa-award text-3xl mb-3"></i>
-                            <div class="text-3xl font-bold mb-1">98%</div>
-                            <div class="text-sm opacity-90" data-translate="client_stats_satisfaction_label">Kepuasan Klien</div>
+                    <div class="max-w-3xl mx-auto">
+                        <p class="text-lg text-gray-700 leading-relaxed italic" data-translate="client_testimonial">
+                            "Kesuksesan kami diukur dari kepercayaan yang diberikan klien kepada kami. Kami berkomitmen untuk memberikan keunggulan dalam setiap kemitraan, memastikan pertumbuhan berkelanjutan untuk bisnis di seluruh Jawa, Bali, dan Sumatera."
+                        </p>
+                        <div class="mt-6">
+                            <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mx-auto"></div>
                         </div>
-                    </div>
-                    <div class="group">
-                        <div class="bg-gradient-to-br from-green-500 to-teal-500 text-white rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
-                            <i class="fas fa-sync-alt text-3xl mb-3"></i>
-                            <div class="text-3xl font-bold mb-1">85%</div>
-                            <div class="text-sm opacity-90" data-translate="client_stats_renewal_label">Tingkat Perpanjangan</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="max-w-3xl mx-auto">
-                    <p class="text-lg text-gray-700 leading-relaxed italic" data-translate="client_testimonial">
-                        "Kesuksesan kami diukur dari kepercayaan yang diberikan klien kepada kami. Kami berkomitmen untuk memberikan keunggulan dalam setiap kemitraan, memastikan pertumbuhan berkelanjutan untuk bisnis di seluruh Jawa, Bali, dan Sumatera."
-                    </p>
-                    <div class="mt-6">
-                        <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mx-auto"></div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 

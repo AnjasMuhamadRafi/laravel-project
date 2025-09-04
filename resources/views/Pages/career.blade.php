@@ -1,4 +1,4 @@
-    <!-- Success Alert -->
+<!-- Success Alert -->
     @if(session('success'))
     <div id="success-alert" class="fixed inset-0 flex items-center justify-center z-[9999]">
         <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-8 rounded-2xl shadow-2xl flex flex-col items-center space-y-4 animate-fade-in w-full max-w-md mx-auto">
@@ -174,6 +174,7 @@
                     job_requirements: 'Persyaratan Kerja:',
                     job_skills: 'Keahlian yang Dibutuhkan',
                     job_close: 'Tutup',
+                    job_description: 'Deskripsi Pekerjaan',
 
                     // Job Positions
                     position_sales_wifi: 'Sales Wifi',
@@ -352,6 +353,7 @@
                     job_requirements: 'Job Requirements',
                     job_skills: 'Required Skills',
                     job_close: 'Close',
+                    job_description: 'Job Description',
 
                     // Job Positions
                     position_sales_wifi: 'Wifi Sales',
@@ -641,12 +643,6 @@
                     </button>
                 </div>
             </div>
-            </div>
-
-            <!-- Scroll indicator
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <i class="fas fa-chevron-down text-2xl opacity-70"></i>
-        </div> -->
         </section>
 
         <!-- Why Work With Us -->
@@ -738,7 +734,8 @@
                     'Terbiasa bekerja dengan team',
                     'Siap bekerja di bawah tekanan'
                 ],
-                skills: ['Marketing', 'Sales', 'Komunikasi', 'Negosiasi']
+                skills: ['Marketing', 'Sales', 'Komunikasi', 'Negosiasi'],
+                description: 'Kami mencari Sales Wifi yang berpengalaman untuk bergabung dengan tim dinamis kami. Sebagai Sales Wifi, Anda akan bertanggung jawab untuk mempromosikan dan menjual produk layanan internet kepada calon pelanggan. Posisi ini menawarkan kesempatan yang sangat baik untuk mengembangkan karier di industri telekomunikasi yang terus berkembang pesat.'
             },
             {
                 title: 'Kurir Paket',
@@ -753,7 +750,8 @@
                     'Terbiasa bekerja mandiri dan dengan team',
                     'Siap bekerja di bawah tekanan'
                 ],
-                skills: ['Berekendara', 'Baca Map']
+                skills: ['Berkendara', 'Baca Map', 'Navigasi', 'Manajemen Waktu'],
+                description: 'Bergabunglah dengan tim kurir profesional kami! Sebagai Kurir Paket, Anda akan bertanggung jawab untuk mengantarkan paket dengan aman dan tepat waktu kepada pelanggan. Kami menawarkan lingkungan kerja yang mendukung dengan pelatihan komprehensif dan peluang pengembangan karier yang menarik.'
             }
         ],
         filteredJobs() {
@@ -876,6 +874,14 @@
                         </div>
 
                         <div class="space-y-6">
+                            <!-- Job Description Section -->
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4" data-translate="job_description">Deskripsi Pekerjaan</h3>
+                                <div class="text-gray-600 leading-relaxed">
+                                    <p x-text="selectedJob?.description" class="mb-3"></p>
+                                </div>
+                            </div>
+
                             <div>
                                 <h3 class="text-xl font-bold text-gray-800 mb-4" data-translate="job_requirements">Persyaratan Kerja</h3>
                                 <ul class="list-disc list-inside space-y-2 text-gray-600">
@@ -906,87 +912,89 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Application Modal -->
-        <div x-show="showApplyModal" x-cloak class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-            <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" @click.stop>
-                <div class="p-8">
-                    <div class="flex justify-between items-center mb-8">
-                        <div>
-                            <h2 class="text-3xl font-bold text-gray-800 mb-2" data-translate="apply_title">Apply for Position</h2>
-                            <p class="text-gray-600" data-translate="apply_subtitle" x-text="selectedJob ? `${translations[currentLang].apply_position_label} ${selectedJob.title}` : translations[currentLang].apply_subtitle"></p>
-                        </div>
-                        <button @click="showApplyModal = false" class="text-gray-400 hover:text-gray-600 text-2xl">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
 
-                    <form action="{{ route('career.apply') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
-                        @csrf
-                        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Application Modal -->
+            <div x-show="showApplyModal" x-cloak class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+                <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" @click.stop>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-8">
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_full_name">Full Name *</label>
-                                <input name="fullName" type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Your full name" data-translate-placeholder="apply_full_name_placeholder" value="{{ old('fullName') }}">
+                                <h2 class="text-3xl font-bold text-gray-800 mb-2" data-translate="apply_title">Apply for Position</h2>
+                                <p class="text-gray-600" data-translate="apply_subtitle" x-text="selectedJob ? `${translations[currentLang].apply_position_label} ${selectedJob.title}` : translations[currentLang].apply_subtitle"></p>
                             </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_email">Email Address *</label>
-                                <input name="email" type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="your.email@example.com" data-translate-placeholder="apply_email_placeholder" value="{{ old('email') }}">
-                            </div>
+                            <button @click="showApplyModal = false" class="text-gray-400 hover:text-gray-600 text-2xl">
+                                <i class="fas fa-times"></i>
+                            </button>
                         </div>
 
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_phone">Phone Number *</label>
-                                <input name="phone" type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="+62 xxx-xxxx-xxxx" data-translate-placeholder="apply_phone_placeholder" value="{{ old('phone') }}">
+                        <form action="{{ route('career.apply') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
+                            @csrf
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_full_name">Full Name *</label>
+                                    <input name="fullName" type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Your full name" data-translate-placeholder="apply_full_name_placeholder" value="{{ old('fullName') }}">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_email">Email Address *</label>
+                                    <input name="email" type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="your.email@example.com" data-translate-placeholder="apply_email_placeholder" value="{{ old('email') }}">
+                                </div>
                             </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_phone">Phone Number *</label>
+                                    <input name="phone" type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="+62 xxx-xxxx-xxxx" data-translate-placeholder="apply_phone_placeholder" value="{{ old('phone') }}">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_experience">Years of Experience</label>
+                                    <select name="experience" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                        <option value="" data-translate="apply_exp_select">Select experience</option>
+                                        <option value="0-1" {{ old('experience')=='0-1'?'selected':'' }} data-translate="apply_exp_fresh">0-1 Years (Fresh Graduate)</option>
+                                        <option value="1-3" {{ old('experience')=='1-3'?'selected':'' }} data-translate="apply_exp_1_3">1-3 Years</option>
+                                        <option value="3-5" {{ old('experience')=='3-5'?'selected':'' }} data-translate="apply_exp_3_5">3-5 Years</option>
+                                        <option value="5+" {{ old('experience')=='5+'?'selected':'' }} data-translate="apply_exp_5_plus">5+ Years</option>
+                                    </select>
+                                </div>
+                            </div>
+
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_experience">Years of Experience</label>
-                                <select name="experience" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent">
-                                    <option value="" data-translate="apply_exp_select">Select experience</option>
-                                    <option value="0-1" {{ old('experience')=='0-1'?'selected':'' }} data-translate="apply_exp_fresh">0-1 Years (Fresh Graduate)</option>
-                                    <option value="1-3" {{ old('experience')=='1-3'?'selected':'' }} data-translate="apply_exp_1_3">1-3 Years</option>
-                                    <option value="3-5" {{ old('experience')=='3-5'?'selected':'' }} data-translate="apply_exp_3_5">3-5 Years</option>
-                                    <option value="5+" {{ old('experience')=='5+'?'selected':'' }} data-translate="apply_exp_5_plus">5+ Years</option>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_position">Position Applied For</label>
+                                <select name="position" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                    <option value="" data-translate="apply_position_select">Select Position</option>
+                                    <option value="Sales Wifi" {{ old('position')=='Sales Wifi'?'selected':'' }} data-translate="position_sales_wifi">Sales Wifi</option>
+                                    <option value="Kurir Paket" {{ old('position')=='Kurir Paket'?'selected':'' }} data-translate="position_kurir_paket">Kurir Paket</option>
                                 </select>
                             </div>
-                        </div>
 
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_position">Position Applied For</label>
-                            <select name="position" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent">
-                                <option value="" data-translate="apply_position_select">Select Position</option>
-                                <option value="Sales Wifi" {{ old('position')=='Sales Wifi'?'selected':'' }} data-translate="position_sales_wifi">Sales Wifi</option>
-                                <option value="Kurir Paket" {{ old('position')=='Kurir Paket'?'selected':'' }} data-translate="position_kurir_paket">Kurir Paket</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_cover_letter">Cover Letter *</label>
-                            <textarea name="coverLetter" required rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none" placeholder="Tell us why you're interested in this position and what makes you a great candidate..." data-translate-placeholder="apply_cover_letter_placeholder">{{ old('coverLetter') }}</textarea>
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_resume">Resume/CV *</label>
-                            <div class="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-orange-500 transition-colors">
-                                <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-4"></i>
-                                <p class="text-gray-600 mb-2" data-translate="apply_resume_drop">Drop your resume here or click to browse</p>
-                                <input type="file" name="resume" accept=".pdf,.doc,.docx" class="block mx-auto mb-2" required>
-                                <p class="text-xs text-gray-500 mt-2" data-translate="apply_resume_formats">Supported formats: PDF, DOC, DOCX (Max 5MB)</p>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_cover_letter">Cover Letter *</label>
+                                <textarea name="coverLetter" required rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none" placeholder="Tell us why you're interested in this position and what makes you a great candidate..." data-translate-placeholder="apply_cover_letter_placeholder">{{ old('coverLetter') }}</textarea>
                             </div>
-                        </div>
 
-                        <div class="flex space-x-4 pt-6">
-                            <button type="submit" class="flex-1 bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl hover:from-orange-600 hover:to-red-600 transition-all duration-300 font-medium text-lg">
-                                <i class="fas fa-paper-plane mr-2"></i><span data-translate="apply_submit">Submit Application</span>
-                            </button>
-                            <button type="button" @click="showApplyModal = false" class="bg-gradient-to-r from-gray-500 to-gray-600 text-white px-8 py-4 rounded-xl hover:from-gray-600 hover:to-gray-700 transition-all duration-300 font-medium">
-                                <i class="fas fa-times mr-2"></i><span data-translate="apply_cancel">Cancel</span>
-                            </button>
-                        </div>
-                    </form>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="apply_resume">Resume/CV *</label>
+                                <div class="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-orange-500 transition-colors">
+                                    <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-4"></i>
+                                    <p class="text-gray-600 mb-2" data-translate="apply_resume_drop">Drop your resume here or click to browse</p>
+                                    <input type="file" name="resume" accept=".pdf,.doc,.docx" class="block mx-auto mb-2" required>
+                                    <p class="text-xs text-gray-500 mt-2" data-translate="apply_resume_formats">Supported formats: PDF, DOC, DOCX (Max 5MB)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex space-x-4 pt-6">
+                                <button type="submit" class="flex-1 bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl hover:from-orange-600 hover:to-red-600 transition-all duration-300 font-medium text-lg">
+                                    <i class="fas fa-paper-plane mr-2"></i><span data-translate="apply_submit">Submit Application</span>
+                                </button>
+                                <button type="button" @click="showApplyModal = false" class="bg-gradient-to-r from-gray-500 to-gray-600 text-white px-8 py-4 rounded-xl hover:from-gray-600 hover:to-gray-700 transition-all duration-300 font-medium">
+                                    <i class="fas fa-times mr-2"></i><span data-translate="apply_cancel">Cancel</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+
+        </section>
 
         <!-- Benefits Section -->
         <section class="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
@@ -1026,10 +1034,10 @@
                         </div>
                         <h3 class="font-bold text-xl text-white mb-4 leading-[2] pb-1" data-translate="benefit_financial_title">Financial Security</h3>
                         <ul class="space-y-3 text-sm text-gray-300 leading-[1.7] pb-1">
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-blue-400 mr-3 text-xs"></i><span data-translate="benefit_financial_salary"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-blue-400 mr-3 text-xs"></i><span data-translate="benefit_financial_bonus"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-blue-400 mr-3 text-xs"></i><span data-translate="benefit_financial_retirement"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-blue-400 mr-3 text-xs"></i><span data-translate="benefit_financial_insurance"></span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-blue-400 mr-3 text-xs"></i><span data-translate="benefit_financial_salary">Competitive Salary Package</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-blue-400 mr-3 text-xs"></i><span data-translate="benefit_financial_bonus">Performance Bonuses</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-blue-400 mr-3 text-xs"></i><span data-translate="benefit_financial_retirement">Retirement Savings Plan</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-blue-400 mr-3 text-xs"></i><span data-translate="benefit_financial_insurance">Life Insurance Coverage</span></li>
                         </ul>
                     </div>
 
@@ -1040,10 +1048,10 @@
                         </div>
                         <h3 class="font-bold text-xl text-white mb-4 leading-[2] pb-1" data-translate="benefit_worklife_title">Work-Life Balance</h3>
                         <ul class="space-y-3 text-sm text-gray-300 leading-[1.7] pb-1">
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-purple-400 mr-3 text-xs"></i><span data-translate="benefit_worklife_flexible"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-purple-400 mr-3 text-xs"></i><span data-translate="benefit_worklife_remote"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-purple-400 mr-3 text-xs"></i><span data-translate="benefit_worklife_timeoff"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-purple-400 mr-3 text-xs"></i><span data-translate="benefit_worklife_family"></span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-purple-400 mr-3 text-xs"></i><span data-translate="benefit_worklife_flexible">Flexible Working Hours</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-purple-400 mr-3 text-xs"></i><span data-translate="benefit_worklife_remote">Remote Work Options</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-purple-400 mr-3 text-xs"></i><span data-translate="benefit_worklife_timeoff">Paid Time Off</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-purple-400 mr-3 text-xs"></i><span data-translate="benefit_worklife_family">Family Leave Policies</span></li>
                         </ul>
                     </div>
 
@@ -1054,10 +1062,10 @@
                         </div>
                         <h3 class="font-bold text-xl text-white mb-4 leading-[2] pb-1" data-translate="benefit_career_title">Career Growth</h3>
                         <ul class="space-y-3 text-sm text-gray-300 leading-[1.7] pb-1">
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-orange-400 mr-3 text-xs"></i><span data-translate="benefit_career_training"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-orange-400 mr-3 text-xs"></i><span data-translate="benefit_career_mentorship"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-orange-400 mr-3 text-xs"></i><span data-translate="benefit_career_promotion"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-orange-400 mr-3 text-xs"></i><span data-translate="benefit_career_skills"></span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-orange-400 mr-3 text-xs"></i><span data-translate="benefit_career_training">Professional Training Programs</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-orange-400 mr-3 text-xs"></i><span data-translate="benefit_career_mentorship">Mentorship Opportunities</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-orange-400 mr-3 text-xs"></i><span data-translate="benefit_career_promotion">Internal Promotion Priority</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-orange-400 mr-3 text-xs"></i><span data-translate="benefit_career_skills">Skills Development Support</span></li>
                         </ul>
                     </div>
 
@@ -1068,10 +1076,10 @@
                         </div>
                         <h3 class="font-bold text-xl text-white mb-4 leading-[2] pb-1" data-translate="benefit_culture_title">Team Culture</h3>
                         <ul class="space-y-3 text-sm text-gray-300 leading-[1.7] pb-1">
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-yellow-400 mr-3 text-xs"></i><span data-translate="benefit_culture_inclusive"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-yellow-400 mr-3 text-xs"></i><span data-translate="benefit_culture_building"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-yellow-400 mr-3 text-xs"></i><span data-translate="benefit_culture_recognition"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-yellow-400 mr-3 text-xs"></i><span data-translate="benefit_culture_communication"></span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-yellow-400 mr-3 text-xs"></i><span data-translate="benefit_culture_inclusive">Inclusive Work Environment</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-yellow-400 mr-3 text-xs"></i><span data-translate="benefit_culture_building">Team Building Activities</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-yellow-400 mr-3 text-xs"></i><span data-translate="benefit_culture_recognition">Recognition Programs</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-yellow-400 mr-3 text-xs"></i><span data-translate="benefit_culture_communication">Open Communication</span></li>
                         </ul>
                     </div>
 
@@ -1082,10 +1090,10 @@
                         </div>
                         <h3 class="font-bold text-xl text-white mb-4 leading-[2] pb-1" data-translate="benefit_perks_title">Additional Perks</h3>
                         <ul class="space-y-3 text-sm text-gray-300 leading-[1.7] pb-1">
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-indigo-400 mr-3 text-xs"></i><span data-translate="benefit_perks_discounts"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-indigo-400 mr-3 text-xs"></i><span data-translate="benefit_perks_transport"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-indigo-400 mr-3 text-xs"></i><span data-translate="benefit_perks_meals"></span></li>
-                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-indigo-400 mr-3 text-xs"></i><span data-translate="benefit_perks_events"></span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-indigo-400 mr-3 text-xs"></i><span data-translate="benefit_perks_discounts">Employee Discounts</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-indigo-400 mr-3 text-xs"></i><span data-translate="benefit_perks_transport">Transportation Allowance</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-indigo-400 mr-3 text-xs"></i><span data-translate="benefit_perks_meals">Meal Subsidies</span></li>
+                            <li class="flex items-center pb-1" style="line-height:1.8; vertical-align:baseline; overflow:visible;"><i class="fas fa-check text-indigo-400 mr-3 text-xs"></i><span data-translate="benefit_perks_events">Company Events</span></li>
                         </ul>
                     </div>
                 </div>
@@ -1095,7 +1103,7 @@
         <!-- Contact CTA -->
         <section class="relative bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white py-20 overflow-hidden">
             <div class="absolute inset-0">
-                <div class="absolute top-0 left-0 w-full h-full bg-black/20"></div>
+                <div class="absolute inset-0 bg-black/20"></div>
                 <div class="absolute -top-24 -left-24 w-48 h-48 bg-white/10 rounded-full animate-float"></div>
                 <div class="absolute -bottom-32 -right-32 w-64 h-64 bg-white/5 rounded-full animate-float" style="animation-delay: -3s;"></div>
             </div>
@@ -1167,215 +1175,215 @@
             </div>
         </section>
 
-        <!-- Modern Footer -->
-        <footer class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden">
-            <!-- Animated Background -->
-            <div class="absolute inset-0">
-                <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-full blur-3xl animate-float"></div>
-                <div class="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tl from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-float" style="animation-delay: -3s;"></div>
-                <div class="absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-to-r from-green-500/5 to-teal-500/5 rounded-full blur-3xl animate-float" style="animation-delay: -6s;"></div>
-            </div>
+            <!-- Modern Footer -->
+            <footer class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden">
+                <!-- Animated Background -->
+                <div class="absolute inset-0">
+                    <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-full blur-3xl animate-float"></div>
+                    <div class="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tl from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-float" style="animation-delay: -3s;"></div>
+                    <div class="absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-to-r from-green-500/5 to-teal-500/5 rounded-full blur-3xl animate-float" style="animation-delay: -6s;"></div>
+                </div>
 
-            <div class="relative max-w-6xl mx-auto px-4 md:px-6 py-16 md:py-20">
-                <!-- Main Footer Content -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="relative max-w-6xl mx-auto px-4 md:px-6 py-16 md:py-20">
+                    <!-- Main Footer Content -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
 
-                    <!-- Company Info -->
-                    <div class="md:col-span-2 space-y-6">
-                        <!-- Logo Section -->
-                        <div class="flex flex-col items-center md:items-start">
-                            <div class="group relative mb-6">
-                                <div class="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                                <div class="relative bg-white p-4 rounded-2xl">
-                                    <img src="assets/images/enlulu.png" alt="Enlulu Logo" class="h-16 object-contain">
+                        <!-- Company Info -->
+                        <div class="md:col-span-2 space-y-6">
+                            <!-- Logo Section -->
+                            <div class="flex flex-col items-center md:items-start">
+                                <div class="group relative mb-6">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                                    <div class="relative bg-white p-4 rounded-2xl">
+                                        <img src="assets/images/enlulu.png" alt="Enlulu Logo" class="h-16 object-contain">
+                                    </div>
+                                </div>
+
+                                <div class="text-center md:text-left">
+                                    <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                                        <span data-translate="footer_company_name">PT. Enlulu Sukses Makmur</span>
+                                    </h3>
+                                    <div class="space-y-3 text-gray-300 leading-relaxed flex flex-col items-center md:items-start">
+                                        <div class="flex items-start space-x-3">
+                                            <i class="fas fa-building text-orange-400 mt-1 text-sm"></i>
+                                            <div class="text-sm">
+                                                <p>Graha Mustika Ratu Lt. Annex</p>
+                                                <p>Jl. Gatot Subroto, Kav 74-75</p>
+                                                <p>Jakarta Selatan 12870</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center space-x-3">
+                                            <i class="fas fa-phone text-blue-400 text-sm"></i>
+                                            <span class="text-sm">(021) 8306658</span>
+                                        </div>
+
+                                        <div class="flex items-center space-x-3">
+                                            <i class="fas fa-fax text-green-400 text-sm"></i>
+                                            <span class="text-sm">(021) 8306659</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="text-center md:text-left">
-                                <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-                                    <span data-translate="footer_company_name">PT. Enlulu Sukses Makmur</span>
+                        <!-- Quick Links -->
+                        <div class="space-y-6">
+                            <div class="flex flex-col items-center md:items-start">
+                                <h3 class="text-xl font-bold text-white relative">
+                                    <span data-translate="footer_quick_links"></span>
                                 </h3>
-                                <div class="space-y-3 text-gray-300 leading-relaxed flex flex-col items-center md:items-start">
-                                    <div class="flex items-start space-x-3">
-                                        <i class="fas fa-building text-orange-400 mt-1 text-sm"></i>
-                                        <div class="text-sm">
-                                            <p>Graha Mustika Ratu Lt. Annex</p>
-                                            <p>Jl. Gatot Subroto, Kav 74-75</p>
-                                            <p>Jakarta Selatan 12870</p>
+                                <ul class="space-y-3">
+                                    <li>
+                                        <a href="/" class="group flex items-center space-x-3 text-gray-300 hover:text-white transition-all duration-300">
+                                            <div class="w-2 h-2 bg-yellow-400 rounded-full opacity-50 group-hover:opacity-100 group-hover:scale-125 transition-all"></div>
+                                            <span class="group-hover:translate-x-1 transition-transform" data-translate="nav_home">Home</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/about" class="group flex items-center space-x-3 text-gray-300 hover:text-white transition-all duration-300">
+                                            <div class="w-2 h-2 bg-blue-400 rounded-full opacity-50 group-hover:opacity-100 group-hover:scale-125 transition-all"></div>
+                                            <span class="group-hover:translate-x-1 transition-transform" data-translate="nav_about">About Us</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/news" class="group flex items-center space-x-3 text-gray-300 hover:text-white transition-all duration-300">
+                                            <div class="w-2 h-2 bg-purple-400 rounded-full opacity-50 group-hover:opacity-100 group-hover:scale-125 transition-all"></div>
+                                            <span class="group-hover:translate-x-1 transition-transform" data-translate="nav_news">News</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/career" class="group flex items-center space-x-3 text-orange-400 font-medium">
+                                            <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
+                                            <span data-translate="nav_career">Career</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/contact" class="group flex items-center space-x-3 text-gray-300 hover:text-white transition-all duration-300">
+                                            <div class="w-2 h-2 bg-green-400 rounded-full opacity-50 group-hover:opacity-100 group-hover:scale-125 transition-all"></div>
+                                            <span class="group-hover:translate-x-1 transition-transform" data-translate="nav_contact">Contact Us</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="space-y-6">
+                            <div class="flex flex-col items-center md:items-start">
+                                <h3 class="text-xl font-bold text-white relative">
+                                    <span data-translate="footer_get_in_touch"></span>
+                                </h3>
+                                <div class="space-y-4">
+                                    <div class="group flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <i class="fas fa-phone text-white text-sm"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-gray-400 text-xs" data-translate="cta_phone">Phone</p>
+                                            <p class="text-white font-medium">(021) 8306658</p>
                                         </div>
                                     </div>
 
-                                    <div class="flex items-center space-x-3">
-                                        <i class="fas fa-phone text-blue-400 text-sm"></i>
-                                        <span class="text-sm">(021) 8306658</span>
+                                    <div class="group flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <i class="fas fa-envelope text-white text-sm"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-gray-400 text-xs" data-translate="cta_hr_email">Email</p>
+                                            <p class="text-white font-medium text-sm">trio@enlulu.co.id</p>
+                                        </div>
                                     </div>
 
-                                    <div class="flex items-center space-x-3">
-                                        <i class="fas fa-fax text-green-400 text-sm"></i>
-                                        <span class="text-sm">(021) 8306659</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Quick Links -->
-                    <div class="space-y-6">
-                        <div class="flex flex-col items-center md:items-start">
-                            <h3 class="text-xl font-bold text-white relative">
-                                <span data-translate="footer_quick_links"></span>
-                            </h3>
-                            <ul class="space-y-3">
-                                <li>
-                                    <a href="/" class="group flex items-center space-x-3 text-gray-300 hover:text-white transition-all duration-300">
-                                        <div class="w-2 h-2 bg-yellow-400 rounded-full opacity-50 group-hover:opacity-100 group-hover:scale-125 transition-all"></div>
-                                        <span class="group-hover:translate-x-1 transition-transform" data-translate="nav_home">Home</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/about" class="group flex items-center space-x-3 text-gray-300 hover:text-white transition-all duration-300">
-                                        <div class="w-2 h-2 bg-blue-400 rounded-full opacity-50 group-hover:opacity-100 group-hover:scale-125 transition-all"></div>
-                                        <span class="group-hover:translate-x-1 transition-transform" data-translate="nav_about">About Us</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/news" class="group flex items-center space-x-3 text-gray-300 hover:text-white transition-all duration-300">
-                                        <div class="w-2 h-2 bg-purple-400 rounded-full opacity-50 group-hover:opacity-100 group-hover:scale-125 transition-all"></div>
-                                        <span class="group-hover:translate-x-1 transition-transform" data-translate="nav_news">News</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/career" class="group flex items-center space-x-3 text-orange-400 font-medium">
-                                        <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
-                                        <span data-translate="nav_career">Career</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/contact" class="group flex items-center space-x-3 text-gray-300 hover:text-white transition-all duration-300">
-                                        <div class="w-2 h-2 bg-green-400 rounded-full opacity-50 group-hover:opacity-100 group-hover:scale-125 transition-all"></div>
-                                        <span class="group-hover:translate-x-1 transition-transform" data-translate="nav_contact">Contact Us</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Contact Info -->
-                    <div class="space-y-6">
-                        <div class="flex flex-col items-center md:items-start">
-                            <h3 class="text-xl font-bold text-white relative">
-                                <span data-translate="footer_get_in_touch"></span>
-                            </h3>
-                            <div class="space-y-4">
-                                <div class="group flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                                    <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <i class="fas fa-phone text-white text-sm"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-gray-400 text-xs" data-translate="cta_phone">Phone</p>
-                                        <p class="text-white font-medium">(021) 8306658</p>
-                                    </div>
-                                </div>
-
-                                <div class="group flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                                    <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <i class="fas fa-envelope text-white text-sm"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-gray-400 text-xs" data-translate="cta_hr_email">Email</p>
-                                        <p class="text-white font-medium text-sm">trio@enlulu.co.id</p>
-                                    </div>
-                                </div>
-
-                                <div class="group flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                                    <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <i class="fas fa-map-marker-alt text-white text-sm"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-gray-400 text-xs" data-translate="footer_follow">Location</p>
-                                        <p class="text-white font-medium">Jakarta Selatan</p>
+                                    <div class="group flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <i class="fas fa-map-marker-alt text-white text-sm"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-gray-400 text-xs" data-translate="footer_follow">Location</p>
+                                            <p class="text-white font-medium">Jakarta Selatan</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Services Preview -->
-                <div class="border-t border-gray-700/50 pt-12 mb-12">
-                    <h3 class="text-2xl font-bold text-center mb-8 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">
-                        <span data-translate="footer_services">Our Services</span>
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                        <div class="bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-2xl p-4 text-center group hover:scale-105 transition-transform">
-                            <i class="fas fa-users text-orange-400 text-2xl mb-2"></i>
-                            <p class="text-white text-sm font-medium" data-translate="footer_service1">Manpower</p>
-                            <p class="text-gray-400 text-xs" data-translate="footer_service1_sub">Outsourcing</p>
-                        </div>
-                        <div class="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl p-4 text-center group hover:scale-105 transition-transform">
-                            <i class="fas fa-user-tie text-blue-400 text-2xl mb-2"></i>
-                            <p class="text-white text-sm font-medium" data-translate="footer_service2">HR</p>
-                            <p class="text-gray-400 text-xs" data-translate="footer_service2_sub">Management</p>
-                        </div>
-                        <div class="bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl p-4 text-center group hover:scale-105 transition-transform">
-                            <i class="fas fa-shield-alt text-green-400 text-2xl mb-2"></i>
-                            <p class="text-white text-sm font-medium" data-translate="footer_service3">Pest</p>
-                            <p class="text-gray-400 text-xs" data-translate="footer_service3_sub">Control</p>
-                        </div>
-                        <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl p-4 text-center group hover:scale-105 transition-transform">
-                            <i class="fas fa-broom text-purple-400 text-2xl mb-2"></i>
-                            <p class="text-white text-sm font-medium" data-translate="footer_service4">Cleaning</p>
-                            <p class="text-gray-400 text-xs" data-translate="footer_service4_sub">Service</p>
-                        </div>
-                        <div class="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 rounded-2xl p-4 text-center group hover:scale-105 transition-transform">
-                            <i class="fas fa-lightbulb text-yellow-400 text-2xl mb-2"></i>
-                            <p class="text-white text-sm font-medium" data-translate="footer_service5">LED</p>
-                            <p class="text-gray-400 text-xs" data-translate="footer_service5_sub">Lighting</p>
+                    <!-- Services Preview -->
+                    <div class="border-t border-gray-700/50 pt-12 mb-12">
+                        <h3 class="text-2xl font-bold text-center mb-8 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">
+                            <span data-translate="footer_services">Our Services</span>
+                        </h3>
+                        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                            <div class="bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-2xl p-4 text-center group hover:scale-105 transition-transform">
+                                <i class="fas fa-users text-orange-400 text-2xl mb-2"></i>
+                                <p class="text-white text-sm font-medium" data-translate="footer_service1">Manpower</p>
+                                <p class="text-gray-400 text-xs" data-translate="footer_service1_sub">Outsourcing</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl p-4 text-center group hover:scale-105 transition-transform">
+                                <i class="fas fa-user-tie text-blue-400 text-2xl mb-2"></i>
+                                <p class="text-white text-sm font-medium" data-translate="footer_service2">HR</p>
+                                <p class="text-gray-400 text-xs" data-translate="footer_service2_sub">Management</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl p-4 text-center group hover:scale-105 transition-transform">
+                                <i class="fas fa-shield-alt text-green-400 text-2xl mb-2"></i>
+                                <p class="text-white text-sm font-medium" data-translate="footer_service3">Pest</p>
+                                <p class="text-gray-400 text-xs" data-translate="footer_service3_sub">Control</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl p-4 text-center group hover:scale-105 transition-transform">
+                                <i class="fas fa-broom text-purple-400 text-2xl mb-2"></i>
+                                <p class="text-white text-sm font-medium" data-translate="footer_service4">Cleaning</p>
+                                <p class="text-gray-400 text-xs" data-translate="footer_service4_sub">Service</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 rounded-2xl p-4 text-center group hover:scale-105 transition-transform">
+                                <i class="fas fa-lightbulb text-yellow-400 text-2xl mb-2"></i>
+                                <p class="text-white text-sm font-medium" data-translate="footer_service5">LED</p>
+                                <p class="text-gray-400 text-xs" data-translate="footer_service5_sub">Lighting</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Social Media & Newsletter -->
-                <div class="border-t border-gray-700/50 pt-12 mb-12">
-                    <div class="text-2xl font-bold text-center mb-8 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">
-                        <div class="text-center md:text-center">
-                            <h3 class="text-xl font-bold mb-6 text-white" data-translate="footer_follow">Follow Us</h3>
-                            <div class="flex justify-center md:justify-center space-x-4">
-                                <a href="https://www.facebook.com/p/PT-Enlulu-Sukses-Makmur-100063922750338/" class="group w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
-                                    <i class="fab fa-facebook-f text-white group-hover:scale-125 transition-transform"></i>
-                                </a>
-                                <a href="https://www.instagram.com/pt.enlulu_sukses_makmur/" class="group w-12 h-12 bg-gradient-to-r from-pink-600 to-red-500 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
-                                    <i class="fab fa-instagram text-white group-hover:scale-125 transition-transform"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/company/pt-enlulu-sukses-makmur" class="group w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
-                                    <i class="fab fa-linkedin-in text-white group-hover:scale-125 transition-transform"></i>
-                                </a>
-                                <a href="https://wa.me/6282246842008" class="group w-12 h-12 bg-gradient-to-r from-green-600 to-green-500 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
-                                    <i class="fab fa-whatsapp text-white group-hover:scale-125 transition-transform"></i>
-                                </a>
+                    <!-- Social Media & Newsletter -->
+                    <div class="border-t border-gray-700/50 pt-12 mb-12">
+                        <div class="text-2xl font-bold text-center mb-8 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">
+                            <div class="text-center md:text-center">
+                                <h3 class="text-xl font-bold mb-6 text-white" data-translate="footer_follow">Follow Us</h3>
+                                <div class="flex justify-center md:justify-center space-x-4">
+                                    <a href="https://www.facebook.com/p/PT-Enlulu-Sukses-Makmur-100063922750338/" class="group w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
+                                        <i class="fab fa-facebook-f text-white group-hover:scale-125 transition-transform"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/pt.enlulu_sukses_makmur/" class="group w-12 h-12 bg-gradient-to-r from-pink-600 to-red-500 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
+                                        <i class="fab fa-instagram text-white group-hover:scale-125 transition-transform"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/pt-enlulu-sukses-makmur" class="group w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
+                                        <i class="fab fa-linkedin-in text-white group-hover:scale-125 transition-transform"></i>
+                                    </a>
+                                    <a href="https://wa.me/6282246842008" class="group w-12 h-12 bg-gradient-to-r from-green-600 to-green-500 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
+                                        <i class="fab fa-whatsapp text-white group-hover:scale-125 transition-transform"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Copyright -->
+                    <div class="border-t border-gray-700/50 pt-8">
+                        <div class="flex justify-center items-center text-gray-400 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                                <p>&copy; <span data-translate="footer_copyright">2025 PT. ENLULU SUKSES MAKMUR. Seluruh hak cipta dilindungi.</span></p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Bottom Copyright -->
-                <div class="border-t border-gray-700/50 pt-8">
-                    <div class="flex justify-center items-center text-gray-400 text-sm">
-                        <div class="flex items-center space-x-2">
-                            <div class="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
-                            <p>&copy; <span data-translate="footer_copyright">2025 PT. ENLULU SUKSES MAKMUR. Seluruh hak cipta dilindungi.</span></p>
-                        </div>
-                    </div>
+                <!-- Back to Top Button -->
+                <div class="fixed bottom-8 right-8 z-50">
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="group w-14 h-14 bg-gradient-to-r from-orange-500 to-red-500 rounded-full shadow-2xl hover:shadow-orange-500/25 hover:scale-110 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-chevron-up text-white group-hover:scale-125 transition-transform"></i>
+                    </button>
                 </div>
-            </div>
-
-            <!-- Back to Top Button -->
-            <div class="fixed bottom-8 right-8 z-50">
-                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="group w-14 h-14 bg-gradient-to-r from-orange-500 to-red-500 rounded-full shadow-2xl hover:shadow-orange-500/25 hover:scale-110 transition-all duration-300 flex items-center justify-center">
-                    <i class="fas fa-chevron-up text-white group-hover:scale-125 transition-transform"></i>
-                </button>
-            </div>
-        </footer>
+            </footer>
 
     </body>
 
