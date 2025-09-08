@@ -821,7 +821,7 @@
                         <div class="space-y-3">
                             <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
                                 <p class="font-medium text-gray-800 text-sm">Staff Recruitment 1</p>
-                                <p class="text-gray-500 text-xs">Yoni</p>
+                                <p class="text-gray-500 text-xs">Yani</p>
                             </div>
                             <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
                                 <p class="font-medium text-gray-800 text-sm">Staff Recruitment 2</p>
