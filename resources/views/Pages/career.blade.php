@@ -173,6 +173,7 @@
                 // Job Listings
                 job_requirements: 'Persyaratan Kerja:',
                 job_skills: 'Keahlian yang Dibutuhkan',
+                job_place: 'Penempatan',
                 job_close: 'Tutup',
                 job_description: 'Deskripsi Pekerjaan',
 
@@ -352,6 +353,7 @@
                 // Job Listings
                 job_requirements: 'Job Requirements',
                 job_skills: 'Required Skills',
+                job_place: 'Placement',
                 job_close: 'Close',
                 job_description: 'Job Description',
 
@@ -774,8 +776,11 @@
                     'Terbiasa bekerja mandiri dan dengan team',
                     'Siap bekerja di bawah tekanan'
                 ],
-                skills: ['Berkendara', 'Baca Map', 'Navigasi', 'Manajemen Waktu'],
-                description: 'Bergabunglah dengan tim kurir profesional kami! Sebagai Kurir Paket, Anda akan bertanggung jawab untuk mengantarkan paket dengan aman dan tepat waktu kepada pelanggan. Kami menawarkan lingkungan kerja yang mendukung dengan pelatihan komprehensif dan peluang pengembangan karier yang menarik.'
+                skills: ['Berkendara', 'Teliti', 'Navigasi', 'Manajemen Waktu'],
+                description: 'Bergabunglah dengan tim kurir profesional kami! Sebagai Kurir Paket, Anda akan bertanggung jawab untuk mengantarkan paket dengan aman dan tepat waktu kepada pelanggan. Kami menawarkan lingkungan kerja yang mendukung dengan pelatihan komprehensif dan peluang pengembangan karier yang menarik.',
+                placement: [
+        'Jakarta',
+        ]
             }
         ],
         filteredJobs() {
@@ -993,7 +998,7 @@
                             </div>
 
                             <div x-show="selectedJob?.placement">
-                                <h3 class="text-xl font-bold text-gray-800 mb-4">Penempatan</h3>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4" data-translate="job_place">Penempatan</h3>
                                 <div class="flex flex-wrap gap-2">
                                     <template x-for="place in selectedJob?.placement">
                                         <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium" x-text="place"></span>
