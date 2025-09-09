@@ -109,9 +109,10 @@
 
                 // Company Profile Section
                 profile_title: 'Siapa Kami',
-                profile_text1: 'PT. ENLULU SUKSES MAKMUR adalah perusahaan Manpower Outsourcing terkemuka dengan keahlian luar biasa dalam Rekrutmen, Manajemen HR & Pelatihan. Portofolio bisnis komprehensif kami meluas ke Manajemen Pengendalian Hama, Layanan Kebersihan, dan solusi Pencahayaan LED.',
-                profile_text2: 'Saat ini, kami dengan bangga mengelola lebih dari 5000 karyawan di seluruh Jawa, Bali, dan Sumatera, memberikan klien kami yang berharga solusi inovatif yang disesuaikan untuk mengatasi setiap tantangan bisnis dengan keunggulan dan presisi.',
-
+                profile_text1: 'PT. ENLULU SUKSES MAKMUR adalah perusahaan Manpower Outsourcing dengan lini bisnis Rekrutmen, Manajemen HR & Pelatihan, serta unit bisnis Manajemen Pengendalian Hama, Layanan Kebersihan, dan Solusi Pencahayaan LED. Didukung oleh pengetahuan dan pengalaman, kami hadir sebagai mitra profesional dalam menyediakan solusi alternatif terbaik atas berbagai situasi yang dihadapi klien.',
+                profile_text2: 'Kami telah menjalankan kegiatan Manpower Outsourcing dan Manajemen Pengendalian Hama sejak tahun 2001 untuk internal grup perusahaan dan relasi terdekat. Seiring perkembangan bisnis, PT. ENLULU SUKSES MAKMUR resmi didirikan pada 8 Agustus 2008 untuk memberikan layanan yang lebih profesional. Saat ini, kami mengelola lebih dari 5000 karyawan yang tersebar di berbagai perusahaan di wilayah Jawa, Bali, dan Sumatera.',
+                profile_text3: 'Proses rekrutmen karyawan dilakukan dengan 5 Langkah Rekrutmen untuk mendapatkan Orang yang Tepat di Pekerjaan yang Tepat: Pencarian – Penyaringan – Wawancara Profesional – Pelatihan – Penempatan.',
+                profile_text4: 'PT. ENLULU SUKSES MAKMUR didirikan dengan semangat kewirausahaan dan didukung oleh para profesional muda yang memahami serta mampu menghadapi dinamika bisnis, baik dalam strategi maupun proses operasional untuk merespons tantangan bisnis.',
                 // Key Features
                 feature_professional: 'Keunggulan Profesional',
                 feature_innovative: 'Solusi Inovatif',
@@ -154,6 +155,27 @@
                 //Struktur Organisasi
                 org_structure_title: 'Struktur Organisasi',
                 org_structure_subtitle: 'Struktur organisasi yang solid dan profesional dengan pembagian tugas yang jelas untuk memastikan pelayanan yang optimal kepada klien.',
+                org_structure_directur: 'Direktur',
+                org_structure_contract: 'Spesialis Kontrak',
+                org_structure_mo: 'Manajer Operasi',
+                org_structure_ms: 'Manajer penjualan',
+                org_structure_mp: 'Manajer Proyek Kurir, Gudang',
+                org_structure_mf: 'Manajer Keuangan',
+                org_structure_sr: 'Perekrutan Staf',
+                org_structure_sf: 'Keuangan',
+                org_structure_sa: 'Area Staf',
+                org_structure_sao: 'Tim Dukungan Operasional',
+                org_structure_clear: 'Struktur Jelas',
+                org_structure_clear1: 'Hierarki yang terorganisir dengan baik',
+                org_structure_experience: 'Tim Berpengalaman',
+                org_structure_experience1: 'Profesional di setiap bidang',
+                org_structure_coordination: 'Koordinasi Efektif',
+                org_structure_coordination1: 'Komunikasi antar departemen yang baik',
+                org_structure_growth: 'Pertumbuhan Berkelanjutan',
+                org_structure_growth1: 'Pengembangan organisasi yang terus menerus',
+
+
+
 
                 // Leadership
                 leadership_title: 'Keunggulan Kepemimpinan',
@@ -220,9 +242,10 @@
 
                 // Company Profile Section
                 profile_title: 'Who We Are',
-                profile_text1: 'PT. ENLULU SUKSES MAKMUR is a leading Manpower Outsourcing company with exceptional expertise in Recruitment, HR Management & Training. Our comprehensive business portfolio extends to Pest Control Management, Cleaning Service, and LED Lighting solutions.',
-                profile_text2: 'Today, we proudly manage over 5000 employees across Java, Bali, and Sumatra, providing our valued clients with innovative solutions tailored to overcome every business challenge with excellence and precision.',
-
+                profile_text1: 'PT. ENLULU SUKSES MAKMUR is a Manpower Outsourcing company with a line of business in Recruitment, HR Management & Training, and business units of Pest Control Management, Cleaning Service, and LED Lighting. Supported by knowledge and experience, we are committed to becoming a professional partner in providing the best alternative solutions to various situations encountered by clients.',
+                profile_text2: 'We have carried out Manpower Outsourcing and Pest Control Management activities since 2001 for the internal group of companies and close relations. As the business developed, PT. ENLULU SUKSES MAKMUR was officially established on August 8, 2008 to deliver more professional services. Currently, we manage more than 5000 employees across various companies in the Java, Bali, and Sumatra regions.',
+                profile_text3: 'The employee recruitment process is conducted with a 5 Steps Recruitment Process to get the Right Person for the Right Job: Searching – Screening – Professional Interview – Training – Placement.',
+                profile_text4: 'PT. ENLULU SUKSES MAKMUR was founded with an entrepreneurial spirit and supported by young professionals who understand and are able to handle business dynamics, both in strategy and operational processes, to respond to business challenges.',
                 // Key Features
                 feature_professional: 'Professional Excellence',
                 feature_innovative: 'Innovative Solutions',
@@ -265,6 +288,24 @@
                 //Organization Structure
                 org_structure_title: 'Organization Structure',
                 org_structure_subtitle: 'A solid and professional organizational structure with clear division of tasks to ensure optimal service to clients.',
+                org_structure_directur: 'Directur',
+                org_structure_contract: 'Contract Specialis',
+                org_structure_mo: 'Manager Operation',
+                org_structure_ms: 'Sales Manager',
+                org_structure_mp: 'Courier Project Manager, warehouse',
+                org_structure_mf: 'Finance Manager',
+                org_structure_sr: 'Staff Recruitment',
+                org_structure_sf: 'Finance',
+                org_structure_sa: 'Staff Area',
+                org_structure_sao: 'Operational Support Team',
+                org_structure_clear: 'Clear Structure',
+                org_structure_clear1: 'Well-organized hierarchy',
+                org_structure_experience: 'Experienced Team',
+                org_structure_experience1: 'Professional in every field',
+                org_structure_coordination: 'Effective Coordination',
+                org_structure_coordination1: 'Good inter-departmental communication',
+                org_structure_growth: 'Sustainable Growth',
+                org_structure_growth1: 'Continuous organizational development',
 
                 // Leadership
                 leadership_title: 'Leadership Excellence',
@@ -492,6 +533,10 @@
                         </p>
                         <p class="text-gray-700 leading-relaxed text-lg" data-translate="profile_text2">
                             Saat ini, kami dengan bangga mengelola lebih dari 5000 karyawan di seluruh Jawa, Bali, dan Sumatera, memberikan klien kami yang berharga solusi inovatif yang disesuaikan untuk mengatasi setiap tantangan bisnis dengan keunggulan dan presisi.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed text-lg" data-translate="profile_text3">
+                        </p>
+                        <p class="text-gray-700 leading-relaxed text-lg" data-translate="profile_text4">
                         </p>
                     </div>
 
@@ -739,7 +784,7 @@
                     <div class="text-center group cursor-pointer">
                         <div class="bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-2xl p-6 shadow-xl group-hover:scale-105 transition-all duration-300 min-w-[200px]">
                             <i class="fas fa-crown text-3xl mb-3"></i>
-                            <h4 class="font-bold text-lg">Direktur</h4>
+                            <h4 class="font-bold text-lg" data-translate="org_structure_directur">Direktur</h4>
                             <p class="text-purple-100 text-sm italic">Winarso</p>
                         </div>
                         <div class="w-1 h-8 bg-gray-300 mx-auto mt-4"></div>
@@ -759,7 +804,7 @@
                     <div class="text-center group cursor-pointer">
                         <div class="bg-gradient-to-br from-green-500 to-teal-500 text-white rounded-2xl p-4 shadow-lg group-hover:scale-105 transition-all duration-300">
                             <i class="fas fa-file-contract text-2xl mb-2"></i>
-                            <h4 class="font-bold">Contract Specialis</h4>
+                            <h4 class="font-bold" data-translate="org_structure_contract">Contract Specialis</h4>
                             <p class="text-green-100 text-sm italic">MURI</p>
                         </div>
                     </div>
@@ -767,7 +812,7 @@
                     <div class="text-center group cursor-pointer">
                         <div class="bg-gradient-to-br from-blue-500 to-indigo-500 text-white rounded-2xl p-4 shadow-lg group-hover:scale-105 transition-all duration-300">
                             <i class="fas fa-cogs text-2xl mb-2"></i>
-                            <h4 class="font-bold">Manager Operation</h4>
+                            <h4 class="font-bold" data-translate="org_structure_mo">Manager Operation</h4>
                             <p class="text-blue-100 text-sm italic">Ahmad Suhandi</p>
                         </div>
                     </div>
@@ -780,29 +825,29 @@
                         <div class="text-center mb-6">
                             <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl p-4 inline-block shadow-lg">
                                 <i class="fas fa-chart-line text-xl mb-2"></i>
-                                <h4 class="font-bold">Sales Manager</h4>
+                                <h4 class="font-bold" data-translate="org_structure_ms">Sales Manager</h4>
                                 <p class="text-orange-100 text-sm italic">Trio Pambudi</p>
                             </div>
                         </div>
                         <div class="space-y-3">
                             <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
-                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 1</p>
+                                <p class="font-medium text-gray-800 text-sm"><span data-translate="org_structure_sr"></span> 1</p>
                                 <p class="text-gray-500 text-xs">Abas</p>
                             </div>
                             <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
-                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 2</p>
+                                <p class="font-medium text-gray-800 text-sm"><span data-translate="org_structure_sr"></span> 2</p>
                                 <p class="text-gray-500 text-xs">Mutiara</p>
                             </div>
                             <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
-                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 3</p>
+                                <p class="font-medium text-gray-800 text-sm"><span data-translate="org_structure_sr"></span> 3</p>
                                 <p class="text-gray-500 text-xs">Raisha</p>
                             </div>
                             <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
-                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 4</p>
-                                <p class="text-gray-500 text-xs">Emy</p>
+                                <p class="font-medium text-gray-800 text-sm"><span data-translate="org_structure_sr"></span> 4</p>
+                                <p class="text-gray-500 text-xs">Emmy</p>
                             </div>
                             <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
-                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 5</p>
+                                <p class="font-medium text-gray-800 text-sm"><span data-translate="org_structure_sr"></span> 5</p><span></span>
                                 <p class="text-gray-500 text-xs">Mustamin</p>
                             </div>
                         </div>
@@ -813,18 +858,18 @@
                         <div class="text-center mb-6">
                             <div class="bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-xl p-4 inline-block shadow-lg">
                                 <i class="fas fa-project-diagram text-xl mb-2"></i>
-                                <h4 class="font-bold">Manager Project</h4>
-                                <h4 class="font-bold">Kurir, Gudang</h4>
+                                <h4 class="font-bold" data-translate="org_structure_mp">Manager Project</h4>
+                                <!-- <h4 class="font-bold">Kurir, Gudang</h4> -->
                                 <p class="text-green-100 text-sm italic">Oka Sanjaya</p>
                             </div>
                         </div>
                         <div class="space-y-3">
                             <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
-                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 1</p>
+                                <p class="font-medium text-gray-800 text-sm"><span data-translate="org_structure_sr"></span> 1</p>
                                 <p class="text-gray-500 text-xs">Yani</p>
                             </div>
                             <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
-                                <p class="font-medium text-gray-800 text-sm">Staff Recruitment 2</p>
+                                <p class="font-medium text-gray-800 text-sm"><span data-translate="org_structure_sr"></span> 2</p>
                                 <p class="text-gray-500 text-xs">Ilham</p>
                             </div>
                         </div>
@@ -835,17 +880,17 @@
                         <div class="text-center mb-6">
                             <div class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-xl p-4 inline-block shadow-lg">
                                 <i class="fas fa-calculator text-xl mb-2"></i>
-                                <h4 class="font-bold">Finance Manager</h4>
+                                <h4 class="font-bold" data-translate="org_structure_mf">Finance Manager</h4>
                                 <p class="text-blue-100 text-sm italic">Surti</p>
                             </div>
                         </div>
                         <div class="space-y-3">
                             <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
-                                <p class="font-medium text-gray-800 text-sm">Finance 1</p>
+                                <p class="font-medium text-gray-800 text-sm"><span data-translate="org_structure_sf"></span> 1</p>
                                 <p class="text-gray-500 text-xs">Amir</p>
                             </div>
                             <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow">
-                                <p class="font-medium text-gray-800 text-sm">Finance 2</p>
+                                <p class="font-medium text-gray-800 text-sm"><span data-translate="org_structure_sf"></span> 2</p>
                                 <p class="text-gray-500 text-xs">Arinta</p>
                             </div>
                         </div>
@@ -856,8 +901,8 @@
                 <div class="bg-gradient-to-r from-gray-100 to-gray-200 rounded-2xl p-6 text-center">
                     <div class="bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-xl p-4 inline-block shadow-lg">
                         <i class="fas fa-users text-2xl mb-2"></i>
-                        <h4 class="font-bold text-lg">Staff Area</h4>
-                        <p class="text-gray-200 text-sm">Operational Support Teams</p>
+                        <h4 class="font-bold text-lg" data-translate="org_structure_sa">Staff Area</h4>
+                        <p class="text-gray-200 text-sm" data-translate="org_structure_sao">Operational Support Teams</p>
                     </div>
                 </div>
 
@@ -867,29 +912,29 @@
                         <div class="bg-gradient-to-r from-purple-500 to-pink-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-sitemap text-white text-xl"></i>
                         </div>
-                        <h4 class="font-bold text-gray-800 mb-2">Struktur Jelas</h4>
-                        <p class="text-gray-600 text-sm">Hierarki yang terorganisir dengan baik</p>
+                        <h4 class="font-bold text-gray-800 mb-2" data-translate="org_structure_clear">Struktur Jelas</h4>
+                        <p class="text-gray-600 text-sm" data-translate="org_structure_clear1">Hierarki yang terorganisir dengan baik</p>
                     </div>
                     <div class="bg-gradient-to-br from-orange-100 to-red-100 rounded-2xl p-6 text-center">
                         <div class="bg-gradient-to-r from-orange-500 to-red-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-user-friends text-white text-xl"></i>
                         </div>
-                        <h4 class="font-bold text-gray-800 mb-2">Tim Berpengalaman</h4>
-                        <p class="text-gray-600 text-sm">Profesional di setiap bidang</p>
+                        <h4 class="font-bold text-gray-800 mb-2" data-translate="org_structure_experience">Tim Berpengalaman</h4>
+                        <p class="text-gray-600 text-sm" data-translate="org_structure_experience1">Profesional di setiap bidang</p>
                     </div>
                     <div class="bg-gradient-to-br from-green-100 to-teal-100 rounded-2xl p-6 text-center">
                         <div class="bg-gradient-to-r from-green-500 to-teal-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-tasks text-white text-xl"></i>
                         </div>
-                        <h4 class="font-bold text-gray-800 mb-2">Koordinasi Efektif</h4>
-                        <p class="text-gray-600 text-sm">Komunikasi antar departemen yang baik</p>
+                        <h4 class="font-bold text-gray-800 mb-2" data-translate="org_structure_coordination">Koordinasi Efektif</h4>
+                        <p class="text-gray-600 text-sm" data-translate="org_structure_coordination1">Komunikasi antar departemen yang baik</p>
                     </div>
                     <div class="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl p-6 text-center">
                         <div class="bg-gradient-to-r from-blue-500 to-cyan-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-chart-line text-white text-xl"></i>
                         </div>
-                        <h4 class="font-bold text-gray-800 mb-2">Pertumbuhan Berkelanjutan</h4>
-                        <p class="text-gray-600 text-sm">Pengembangan organisasi yang terus menerus</p>
+                        <h4 class="font-bold text-gray-800 mb-2" data-translate="org_structure_growth">Pertumbuhan Berkelanjutan</h4>
+                        <p class="text-gray-600 text-sm" data-translate="org_structure_growth1">Pengembangan organisasi yang terus menerus</p>
                     </div>
                 </div>
             </div>
