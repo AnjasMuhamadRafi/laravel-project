@@ -1240,7 +1240,7 @@
                                 </div>
                                 <div>
                                     <p class="text-gray-200 text-xs" data-translate="cta_hr_email">HR Email</p>
-                                    <p class="text-white font-medium">hr@enlulu.co.id</p>
+                                    <p class="text-white font-medium">trio@enlulu.co.id</p>
                                 </div>
                             </div>
 
