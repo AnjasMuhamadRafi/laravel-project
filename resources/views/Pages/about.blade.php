@@ -175,8 +175,6 @@
                 org_structure_growth1: 'Pengembangan organisasi yang terus menerus',
 
 
-
-
                 // Leadership
                 leadership_title: 'Keunggulan Kepemimpinan',
                 leadership_subtitle: 'Tim kepemimpinan berpengalaman kami mendorong inovasi dan memastikan pemberian layanan luar biasa di semua unit bisnis.',
@@ -195,11 +193,20 @@
                 client_stats_renewal_label: 'Tingkat Perpanjangan',
                 client_testimonial: '"Kesuksesan kami diukur dari kepercayaan yang diberikan klien kepada kami. Kami berkomitmen untuk memberikan keunggulan dalam setiap kemitraan, memastikan pertumbuhan berkelanjutan untuk bisnis di seluruh Jawa, Bali, dan Sumatera."',
 
+                 // Content
+                content_job:'Kerjasama Kami',
+                content_service:'Layanan Yang Disediakan',
+
                 // Call to Action
                 cta_title: 'Siap Bermitra dengan Kami?',
                 cta_subtitle: 'Temukan bagaimana keahlian dan komitmen kami dapat mendorong bisnis Anda maju. Mari membangun kesuksesan bersama.',
                 cta_contact: 'Hubungi Kami Hari Ini',
                 cta_career: 'Bergabung dengan Tim Kami',
+
+                // CTA Client
+                ctac_title:'Tertarik dengan Layanan Serupa?',
+                ctac_subtitle:'Hubungi kami untuk konsultasi kebutuhan tenaga kerja perusahaan Anda',
+                ctac_button:'Hubungi Kami',
 
                 // Footer
                 footer_company_name: 'PT. Enlulu Sukses Makmur',
@@ -325,11 +332,20 @@
                 client_stats_renewal_label: 'Renewal Rate',
                 client_testimonial: '"Our success is measured by the trust our clients place in us. We are committed to delivering excellence in every partnership, ensuring sustainable growth for businesses across Java, Bali, and Sumatra."',
 
+                // Content
+                content_job:'Our Cooperation',
+                content_service:'Services Provided',
+
                 // Call to Action
                 cta_title: 'Ready to Partner With Us?',
                 cta_subtitle: 'Discover how our expertise and commitment can drive your business forward. Let\'s build success together.',
                 cta_contact: 'Contact Us Today',
                 cta_career: 'Join Our Team',
+
+                // CTA Client
+                ctac_title:'Interested in Similar Services?',
+                ctac_subtitle:"Contact us for a consultation on your company's workforce needs.",
+                ctac_button:'Hubungi Kami',
 
                 // Footer
                 footer_company_name: 'PT. Enlulu Sukses Makmur',
@@ -1427,8 +1443,7 @@
                             <!-- Description -->
                             <div class="mb-8">
                                 <h4 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                                    <i class="fas fa-handshake text-orange-500 mr-3"></i>
-                                    Kerjasama Kami
+                                    <i class="fas fa-handshake text-orange-500 mr-3"></i><span data-translate="content_job"></span>
                                 </h4>
                                 <p x-text="currentClient?.description" class="text-gray-600 leading-relaxed text-lg"></p>
                             </div>
@@ -1436,8 +1451,7 @@
                             <!-- Services Grid -->
                             <div class="mb-6">
                                 <h4 class="text-xl font-semibold text-gray-800 mb-6 flex items-center">
-                                    <i class="fas fa-cogs text-blue-500 mr-3"></i>
-                                    Layanan yang Disediakan
+                                    <i class="fas fa-cogs text-blue-500 mr-3" ></i><span data-translate="content_service"></span>
                                 </h4>
                                 <!-- Fixed grid: 2 columns on mobile, 3 on tablet, 4 on desktop -->
                                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -1454,12 +1468,11 @@
 
                             <!-- Contact CTA -->
                             <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-6 text-center">
-                                <h5 class="text-lg font-semibold text-gray-800 mb-2">Tertarik dengan Layanan Serupa?</h5>
-                                <p class="text-gray-600 mb-4">Hubungi kami untuk konsultasi kebutuhan tenaga kerja perusahaan Anda</p>
+                                <h5 class="text-lg font-semibold text-gray-800 mb-2" data-translate="ctac_title">Tertarik dengan Layanan Serupa?</h5>
+                                <p class="text-gray-600 mb-4" data-translate="ctac_subtitle">Hubungi kami untuk konsultasi kebutuhan tenaga kerja perusahaan Anda</p>
                                 <div class="flex flex-wrap gap-4 justify-center">
                                     <a href="/contact" class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center">
-                                        <i class="fas fa-phone mr-2"></i>
-                                        Hubungi Kami
+                                        <i class="fas fa-phone mr-2" ></i><span data-translate="ctac_button"></span>
                                     </a>
                                 </div>
                             </div>
